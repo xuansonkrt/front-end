@@ -1,0 +1,119 @@
+.bg-red,.bg-red a{
+   /* background-color: rgb(255, 56, 56); */
+   /* color: white; */
+}
+/* ul li{
+    border-right: 1px solid white;
+}
+ul li:last-child{
+    border-right: none;
+} */
+nav a::after{
+    content: "|";
+    font-weight: 300;
+    margin: 0 5px 0 10px;
+    position: relative;
+    top: -2px;
+}
+nav li:last-child a::after{
+    content: "";
+}
+nav a{
+    color: white;
+}
+li{
+    display: inline; 
+}
+
+#google{
+    color:#a43c30;
+}
+#twitter{
+    color:#1593bb;
+}
+#facebook{
+    color:#3a4f8e;
+}
+#youtube{
+    color:#db4940
+}
+.bg-color-1{
+    background-color:  #ed3237;
+}
+.bg-color-2{
+    background-color:  #a8cf45;
+    color: white;
+}
+.color-1{
+    color:  #ed3237;
+}
+.color-2{
+    color:  #a8cf45;
+}
+.color-3{
+    color: #f05535;
+}
+.color-4{
+    color: #f48a3c;
+}
+.color-white{
+    color: white;
+}
+#emailSignup{
+    position: relative;
+    z-index: 1;
+    border-top-left-radius:20px ;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius:20px ;
+    border-bottom-right-radius: 20px;
+    /* float: left; */
+}
+#plane{
+    position: relative;
+    z-index: 2;
+    left: -39px;
+    bottom: 2px;
+    float: right;
+}   
+.demo{
+    background-color: red;
+    border: 10px solid blue;
+}
+.card{
+    font-size: 80%;
+}
+.card-header{
+    border-left: 4px solid #a8cf45;
+    border-bottom: none;
+}
+p{
+    margin-bottom: 5px;
+
+}
+.badge{
+    width: 20px;
+    height: 20px;
+    line-height: 14px;
+    color: white;
+}
+.pictures{
+    height: 200px;
+}
+#currentCost,#oldCost{
+    display: inline;
+}
+.border-bottom-ct{
+    border-bottom: 1px solid black;
+    padding-bottom: 7px;
+}
+.bg-color-2:hover{
+    /* background-color: #4e6b04; */
+}
+.btn-outline-success{
+    border: 1px solid #a8cf45;
+}
+#countProd{
+    position: relative;
+    left: -41px;
+    bottom: 1px;
+}
