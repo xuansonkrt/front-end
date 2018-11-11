@@ -12,17 +12,25 @@
     <title>NOKIA</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="js/jquery.min.js"></script>
-    <script src="js/script.js"></script>
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+    <!-- <script src="js/jquery-ui.js" type="text/javacsript"></script> -->
+    <!-- <script src="js/jquery.min.js" type="text/javacsript"></script> -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- <link rel="stylesheet" href="css/jquery-ui.css"> -->
     <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.4.2/css/all.css' integrity='sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns'
         crossorigin='anonymous'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- <link rel="stylesheet" href="css/font-awesome.min.css"> -->
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+
+    <script src="js/script.js"></script>
     <link rel="stylesheet" href="css/style.css">
+
 </head>
 
 <body>
@@ -40,8 +48,8 @@
 
                     <div class="collapse navbar-collapse  p-0 py-1" id="collapsibleNavbar">
 
-                        <div class="float-lg-left">
-                            <ul class="navbar-nav">
+                        <div class="pull-left">
+                            <ul class="navbar-nav ">
                                 <li class="nav-item">
                                     <a href="#" class="nav-link py-0 ">VỀ KIMI</a>
                                 </li>
@@ -56,7 +64,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="">
+                        <div class="pull-right">
 
                             <ul class="navbar-nav ">
                                 <li class="nav-item">
@@ -85,7 +93,7 @@
                 <nav class="navbar navbar-expand-md  py-0 nav1">
                     <!-- Brand -->
                     <!-- Toggler/collapsibe Button -->
-                    <button class="navbar-toggler float-right" type="button" data-toggle="collapse" data-target="#collapsibleNavbar-2">
+                    <button class="navbar-toggler float-right " type="button" data-toggle="collapse" data-target="#collapsibleNavbar-2">
                         <span class="fa fa-align-justify"></span>
                     </button>
                     <!-- Navbar links -->
@@ -208,7 +216,8 @@
                             </div>
                             <div class="mb-3">
                                 <p><strong>Số lượng:</strong></p>
-                                <input type="text" name="" id="">
+                                <!-- spinner -->
+                                <input type="text" name="" id="SoLuong" style="width: 50px">
                                 <br> <br>
                                 <button class="btn btn-outline-success" style="color: black"><i class="fa fa-cart-plus"></i>
                                     Thêm vào giỏ hàng</button>
@@ -227,603 +236,572 @@
                         </div>
                     </div>
                     <div id="detail" class="mt-5">
-                        <div class="container">
-                            <div class="group-tabs">
-                                <ul class="nav nav-tabs" role="tablist">
-                                    <li class="nav-item active">
-                                        <a href="#ChiTiet" class="nav-link" data-toggle="tab" role="tab">Chi tiết sản phẩm</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="#ThongSo" class="nav-link" data-toggle="tab" role="tab">Thông số kỹ thuật</a>
-                                    </li>
-                                </ul>
+                        <!-- <div class="container"> -->
+                        <div id="tabs">
+                            <ul>
+                                <li><a href="#ChiTiet">Chi tiết sản phẩm</a></li>
+                                <li><a href="#ThongSo">Thông số kỹ thuật</a></li>
+                            </ul>
 
-                                <div class="nav-content">
-                                    <div id="ChiTiet" class="tab-pane fade in active">
-                                        <p>Cùng với Nokia X, Nokia XL đã được hãng cho ra mắt với nhiều bất ngờ. Nokia
-                                            XL mang
-                                            đến những trải nghiệm hoàn toàn mới, khác biệt so với dòng Lumia trước kia
-                                            của
-                                            hãng. Đây là một sự kết hợp độc đáo giữa hệ điều hành Android, giao diện
-                                            Windows
-                                            Phone, ứng dụng của Nokia và Microsoft, và trở thành sản phẩm đầu tiên giữa
-                                            3 ông
-                                            lớn trong ngành di động. Thiết bị rất thích hợp với những bạn trẻ thích
-                                            trải
-                                            nghiệm, cảm nhận công nghệ mới với mức giá phải chăng.</p>
-                                        <p>Màu sắc sặc sỡ luôn là điểm nhận dạng tốt nhất của các dòng điện thoại
-                                            Nokia. Điện
-                                            thoại Nokia XL cũng thật nổi bật với nhiều màu sắc cá tính cho bạn chọn.
-                                            Bên cạnh
-                                            đó thì máy được thiết kế đơn giản, vuông vức và đẹp với chất liệu nhựa bền
-                                            bỉ. Phần
-                                            nắp lưng dễ dàng tháo rời để thay pin hay lắp sim và thẻ nhớ.</p>
-                                        <p>Sự kết hợp với Google đã giúp cho những ai yêu thích thương hiệu Nokia lại
-                                            càng
-                                            thích thú hơn khi nay đã có thể truy cập vào kho ứng dụng Android để tải về
-                                            cho
-                                            mình những trò chơi hay ứng dụng cần thiết. Điện thoại Nokia XL chạy trên
-                                            hệ điều
-                                            hành Android nhưng được tùy biến bởi Nokia tạo nên một phong cách vừa quen
-                                            vừa lạ
-                                            nhưng vẫn rất tiện lợi và dễ sử dụng.</p>
-                                        <p>Màn hình lớn 5 inches của điện thoại Nokia XL để bạn có thể thoải mái lướt
-                                            web với
-                                            diện tích nhìn rộng. Hay sẽ càng thú vị hơn khi xem phim với màn hình lớn
-                                            và rực rỡ
-                                            trên chiếc Nokia XL này.</p>
+                            <!-- <div class="tab-content"> -->
+                            <div id="ChiTiet" class="">
+                                <p>Cùng với Nokia X, Nokia XL đã được hãng cho ra mắt với nhiều bất ngờ. Nokia
+                                    XL mang
+                                    đến những trải nghiệm hoàn toàn mới, khác biệt so với dòng Lumia trước kia
+                                    của
+                                    hãng. Đây là một sự kết hợp độc đáo giữa hệ điều hành Android, giao diện
+                                    Windows
+                                    Phone, ứng dụng của Nokia và Microsoft, và trở thành sản phẩm đầu tiên giữa
+                                    3 ông
+                                    lớn trong ngành di động. Thiết bị rất thích hợp với những bạn trẻ thích
+                                    trải
+                                    nghiệm, cảm nhận công nghệ mới với mức giá phải chăng.</p>
+                                <p>Màu sắc sặc sỡ luôn là điểm nhận dạng tốt nhất của các dòng điện thoại
+                                    Nokia. Điện
+                                    thoại Nokia XL cũng thật nổi bật với nhiều màu sắc cá tính cho bạn chọn.
+                                    Bên cạnh
+                                    đó thì máy được thiết kế đơn giản, vuông vức và đẹp với chất liệu nhựa bền
+                                    bỉ. Phần
+                                    nắp lưng dễ dàng tháo rời để thay pin hay lắp sim và thẻ nhớ.</p>
+                                <p>Sự kết hợp với Google đã giúp cho những ai yêu thích thương hiệu Nokia lại
+                                    càng
+                                    thích thú hơn khi nay đã có thể truy cập vào kho ứng dụng Android để tải về
+                                    cho
+                                    mình những trò chơi hay ứng dụng cần thiết. Điện thoại Nokia XL chạy trên
+                                    hệ điều
+                                    hành Android nhưng được tùy biến bởi Nokia tạo nên một phong cách vừa quen
+                                    vừa lạ
+                                    nhưng vẫn rất tiện lợi và dễ sử dụng.</p>
+                                <p>Màn hình lớn 5 inches của điện thoại Nokia XL để bạn có thể thoải mái lướt
+                                    web với
+                                    diện tích nhìn rộng. Hay sẽ càng thú vị hơn khi xem phim với màn hình lớn
+                                    và rực rỡ
+                                    trên chiếc Nokia XL này.</p>
+                            </div>
+                            <div id="ThongSo">
+                                <div id="TongQuan" class="row mb-1">
+                                    <div class="col-2  bg-secondary ">
+                                        <div class="h-100 my-auto">
+                                            <p class=""><strong>Tổng quan</strong></p>
+
+                                        </div>
+
                                     </div>
-                                    <div id="ThongSo" class="tab-pane fade" role="tabpanel">
-                                        <div id="TongQuan" class="row mb-1">
-                                            <div class="col-2  bg-secondary ">
-                                                <div class="h-100 my-auto">
-                                                        <p class="" ><strong>Tổng quan</strong></p>
-
-                                                </div>
-
-
-                                                  
-                                                
+                                    <div class="col-10">
+                                        <div class="row bg-light mb-1" id="Mang2G">
+                                            <div class="col-3">
+                                                <p>Mạng 2G</p>
                                             </div>
-                                            <div class="col-10">
-                                                <div class="row bg-light mb-1" id="Mang2G">
-                                                    <div class="col-3">
-                                                        <p>Mạng 2G</p>
-                                                    </div>
-                                                    <div class="col-9">
-                                                        <p>GSM 850 / 900 / 1800 / 1900 - SIM 1 & SIM 2</p>
-                                                    </div>
-                                                </div>
-                                                <div class="row bg-light mb-1" id="Mang3G">
-                                                    <div class="col-3">
-                                                        <p>Mạng 3G</p>
-                                                    </div>
-                                                    <div class="col-9">
-                                                        <p>HSDPA 900/2100</p>
-                                                    </div>
-                                                </div>
-                                                <div class="row bg-light mb-1" id="SIM">
-                                                    <div class="col-3">
-                                                        <p>SIM</p>
-                                                    </div>
-                                                    <div class="col-9">
-                                                        <p>Micro SIM, 2 SIM</p>
-                                                    </div>
-                                                </div>
-                                                <div class="row bg-light mb-1" id="CongBo">
-                                                    <div class="col-3">
-                                                        <p>Công bố</p>
-                                                    </div>
-                                                    <div class="col-9">
-                                                        <p>Tháng 2/2014</p>
-                                                    </div>
-                                                </div>
-                                                <div class="row bg-light mb-1" id="PhatHanh">
-                                                    <div class="col-3">
-                                                        <p>Phát hành</p>
-                                                    </div>
-                                                    <div class="col-9">
-                                                        <p>Tháng 5/2014</p>
-                                                    </div>
-                                                </div>
-                                                <div class="row bg-light" id="NgonNgu">
-                                                    <div class="col-3">
-                                                        <p>Ngôn ngữ</p>
-                                                    </div>
-                                                    <div class="col-9">
-                                                        <p>Đa ngôn ngữ (có tiếng Việt)</p>
-                                                    </div>
-                                                </div>
+                                            <div class="col-9">
+                                                <p>GSM 850 / 900 / 1800 / 1900 - SIM 1 & SIM 2</p>
                                             </div>
                                         </div>
-                                        <div id="Camera" class="row mb-1">
-                                            <div class="col-2 bg-secondary">
-                                                <p class="line-height"><strong>Camera</strong></p>
+                                        <div class="row bg-light mb-1" id="Mang3G">
+                                            <div class="col-3">
+                                                <p>Mạng 3G</p>
                                             </div>
-                                            <div class="col-10">
-                                                <div class="row bg-light mb-1" id="DoPhanGiai">
-                                                    <div class="col-3">
-                                                        <p>Độ phân giải</p>
-                                                    </div>
-                                                    <div class="col-9">
-                                                        <p>5 MP; 2592 х 1944 pixels</p>
-                                                    </div>
-                                                </div>
-                                                <div class="row bg-light mb-1" id="LedFlash">
-                                                    <div class="col-3">
-                                                        <p>Led flash</p>
-                                                    </div>
-                                                    <div class="col-9">
-                                                        <p>Led flash</p>
-                                                    </div>
-                                                </div>
-                                                <div class="row bg-light mb-1" id="TinhNang">
-                                                    <div class="col-3">
-                                                        <p>Tính Năng</p>
-                                                    </div>
-                                                    <div class="col-9">
-                                                        <p>Kích thước cảm biến 1/4"; Tự động lấy nét; Nhận diện khuôn
-                                                            mặt; Bức
-                                                            tranh toàn cảnh</p>
-                                                    </div>
-                                                </div>
-                                                <div class="row bg-light mb-1" id="QuayVideo">
-                                                    <div class="col-3">
-                                                        <p>Quay video</p>
-                                                    </div>
-                                                    <div class="col-9">
-                                                        <p>480p@30fps</p>
-                                                    </div>
-                                                </div>
+                                            <div class="col-9">
+                                                <p>HSDPA 900/2100</p>
+                                            </div>
+                                        </div>
+                                        <div class="row bg-light mb-1" id="SIM">
+                                            <div class="col-3">
+                                                <p>SIM</p>
+                                            </div>
+                                            <div class="col-9">
+                                                <p>Micro SIM, 2 SIM</p>
+                                            </div>
+                                        </div>
+                                        <div class="row bg-light mb-1" id="CongBo">
+                                            <div class="col-3">
+                                                <p>Công bố</p>
+                                            </div>
+                                            <div class="col-9">
+                                                <p>Tháng 2/2014</p>
+                                            </div>
+                                        </div>
+                                        <div class="row bg-light mb-1" id="PhatHanh">
+                                            <div class="col-3">
+                                                <p>Phát hành</p>
+                                            </div>
+                                            <div class="col-9">
+                                                <p>Tháng 5/2014</p>
+                                            </div>
+                                        </div>
+                                        <div class="row bg-light" id="NgonNgu">
+                                            <div class="col-3">
+                                                <p>Ngôn ngữ</p>
+                                            </div>
+                                            <div class="col-9">
+                                                <p>Đa ngôn ngữ (có tiếng Việt)</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="Camera" class="row mb-1">
+                                    <div class="col-2 bg-secondary">
+                                        <p class="line-height"><strong>Camera</strong></p>
+                                    </div>
+                                    <div class="col-10">
+                                        <div class="row bg-light mb-1" id="DoPhanGiai">
+                                            <div class="col-3">
+                                                <p>Độ phân giải</p>
+                                            </div>
+                                            <div class="col-9">
+                                                <p>5 MP; 2592 х 1944 pixels</p>
+                                            </div>
+                                        </div>
+                                        <div class="row bg-light mb-1" id="LedFlash">
+                                            <div class="col-3">
+                                                <p>Led flash</p>
+                                            </div>
+                                            <div class="col-9">
+                                                <p>Led flash</p>
+                                            </div>
+                                        </div>
+                                        <div class="row bg-light mb-1" id="TinhNang">
+                                            <div class="col-3">
+                                                <p>Tính Năng</p>
+                                            </div>
+                                            <div class="col-9">
+                                                <p>Kích thước cảm biến 1/4"; Tự động lấy nét; Nhận diện khuôn
+                                                    mặt; Bức
+                                                    tranh toàn cảnh</p>
+                                            </div>
+                                        </div>
+                                        <div class="row bg-light mb-1" id="QuayVideo">
+                                            <div class="col-3">
+                                                <p>Quay video</p>
+                                            </div>
+                                            <div class="col-9">
+                                                <p>480p@30fps</p>
+                                            </div>
+                                        </div>
 
-                                                <div class="row bg-light" id="CameraPhu">
-                                                    <div class="col-3">
-                                                        <p>Camera phụ</p>
-                                                    </div>
-                                                    <div class="col-9">
-                                                        <p>2 MP</p>
-                                                    </div>
-                                                </div>
+                                        <div class="row bg-light" id="CameraPhu">
+                                            <div class="col-3">
+                                                <p>Camera phụ</p>
+                                            </div>
+                                            <div class="col-9">
+                                                <p>2 MP</p>
                                             </div>
                                         </div>
-                                        <div id="ManHinh" class="row mb-1">
-                                            <div class="col-2 bg-secondary">
-                                                <div class="my-auto">
-                                                    <p class=""><strong>Màn hình</strong></p>
-                                                </div>
+                                    </div>
+                                </div>
+                                <div id="ManHinh" class="row mb-1">
+                                    <div class="col-2 bg-secondary">
+                                        <div class="my-auto">
+                                            <p class=""><strong>Màn hình</strong></p>
+                                        </div>
+                                    </div>
+                                    <div class="col-10">
+                                        <div class="row bg-light mb-1" id="CongNghe">
+                                            <div class="col-3">
+                                                <p>Công nghệ</p>
                                             </div>
-                                            <div class="col-10">
-                                                <div class="row bg-light mb-1" id="CongNghe">
-                                                    <div class="col-3">
-                                                        <p>Công nghệ</p>
-                                                    </div>
-                                                    <div class="col-9">
-                                                        <p>IPS LCD, 16 triệu màu</p>
-                                                    </div>
-                                                </div>
-                                                <div class="row bg-light mb-1" id="KichThuoc">
-                                                    <div class="col-3">
-                                                        <p>Kích thước</p>
-                                                    </div>
-                                                    <div class="col-9">
-                                                        <p>5.0 inches</p>
-                                                    </div>
-                                                </div>
-                                                <div class="row bg-light mb-1" id="DoPhanGiai">
-                                                    <div class="col-3">
-                                                        <p>Độ phân giải</p>
-                                                    </div>
-                                                    <div class="col-9">
-                                                        <p>480 x 800 pixels</p>
-                                                    </div>
-                                                </div>
-                                                <div class="row bg-light mb-1" id="MatDoDiemAnh">
-                                                    <div class="col-3">
-                                                        <p>Mật độ điểm ảnh</p>
-                                                    </div>
-                                                    <div class="col-9">
-                                                        <p>187 ppi</p>
-                                                    </div>
-                                                </div>
+                                            <div class="col-9">
+                                                <p>IPS LCD, 16 triệu màu</p>
+                                            </div>
+                                        </div>
+                                        <div class="row bg-light mb-1" id="KichThuoc">
+                                            <div class="col-3">
+                                                <p>Kích thước</p>
+                                            </div>
+                                            <div class="col-9">
+                                                <p>5.0 inches</p>
+                                            </div>
+                                        </div>
+                                        <div class="row bg-light mb-1" id="DoPhanGiai">
+                                            <div class="col-3">
+                                                <p>Độ phân giải</p>
+                                            </div>
+                                            <div class="col-9">
+                                                <p>480 x 800 pixels</p>
+                                            </div>
+                                        </div>
+                                        <div class="row bg-light mb-1" id="MatDoDiemAnh">
+                                            <div class="col-3">
+                                                <p>Mật độ điểm ảnh</p>
+                                            </div>
+                                            <div class="col-9">
+                                                <p>187 ppi</p>
+                                            </div>
+                                        </div>
 
-                                                <div class="row bg-light" id="CamUngDaDiem">
-                                                    <div class="col-3">
-                                                        <p>Cảm ứng đa điểm</p>
-                                                    </div>
-                                                    <div class="col-9">
-                                                        <p>Cảm ứng điện dung</p>
-                                                    </div>
-                                                </div>
+                                        <div class="row bg-light" id="CamUngDaDiem">
+                                            <div class="col-3">
+                                                <p>Cảm ứng đa điểm</p>
+                                            </div>
+                                            <div class="col-9">
+                                                <p>Cảm ứng điện dung</p>
                                             </div>
                                         </div>
-                                        <div id="ThietKe" class="row mb-1">
-                                            <div class="col-2 bg-secondary">
-                                                <p class="line-height"><strong>Thiết kế</strong></p>
+                                    </div>
+                                </div>
+                                <div id="ThietKe" class="row mb-1">
+                                    <div class="col-2 bg-secondary">
+                                        <p class="line-height"><strong>Thiết kế</strong></p>
+                                    </div>
+                                    <div class="col-10">
+                                        <div class="row bg-light mb-1" id="KichThuoc">
+                                            <div class="col-3">
+                                                <p>Kích thước (mm)</p>
                                             </div>
-                                            <div class="col-10">
-                                                <div class="row bg-light mb-1" id="KichThuoc">
-                                                    <div class="col-3">
-                                                        <p>Kích thước (mm)</p>
-                                                    </div>
-                                                    <div class="col-9">
-                                                        <p>141.4 x 77.7 x 10.9 mm</p>
-                                                    </div>
-                                                </div>
-                                                <div class="row bg-light mb-1" id="KhoiLuong">
-                                                    <div class="col-3">
-                                                        <p>Khối lượng (gram)</p>
-                                                    </div>
-                                                    <div class="col-9">
-                                                        <p>190 g</p>
-                                                    </div>
-                                                </div>
-                                                <div class="row bg-light mb-1" id="ChatLieu">
-                                                    <div class="col-3">
-                                                        <p>Chất liệu</p>
-                                                    </div>
-                                                    <div class="col-9">
-                                                        <p>Nhựa cao cấp</p>
-                                                    </div>
-                                                </div>
+                                            <div class="col-9">
+                                                <p>141.4 x 77.7 x 10.9 mm</p>
+                                            </div>
+                                        </div>
+                                        <div class="row bg-light mb-1" id="KhoiLuong">
+                                            <div class="col-3">
+                                                <p>Khối lượng (gram)</p>
+                                            </div>
+                                            <div class="col-9">
+                                                <p>190 g</p>
+                                            </div>
+                                        </div>
+                                        <div class="row bg-light mb-1" id="ChatLieu">
+                                            <div class="col-3">
+                                                <p>Chất liệu</p>
+                                            </div>
+                                            <div class="col-9">
+                                                <p>Nhựa cao cấp</p>
+                                            </div>
+                                        </div>
 
-                                                <div class="row bg-light" id="MauSac">
-                                                    <div class="col-3">
-                                                        <p>Màu sắc</p>
-                                                    </div>
-                                                    <div class="col-9">
-                                                        <p>Xanh lá, Trắng, Đen, Cam, Vàng, Xanh da trời</p>
-                                                    </div>
-                                                </div>
+                                        <div class="row bg-light" id="MauSac">
+                                            <div class="col-3">
+                                                <p>Màu sắc</p>
+                                            </div>
+                                            <div class="col-9">
+                                                <p>Xanh lá, Trắng, Đen, Cam, Vàng, Xanh da trời</p>
                                             </div>
                                         </div>
-                                        <div id="AmThanh" class="row mb-1">
-                                            <div class="col-2 bg-secondary">
-                                                <p class="line-height"><strong>Âm thanh</strong></p>
+                                    </div>
+                                </div>
+                                <div id="AmThanh" class="row mb-1">
+                                    <div class="col-2 bg-secondary">
+                                        <p class="line-height"><strong>Âm thanh</strong></p>
+                                    </div>
+                                    <div class="col-10">
+                                        <div class="row bg-light mb-1" id="LoaNgoai">
+                                            <div class="col-3">
+                                                <p>Loa ngoài</p>
                                             </div>
-                                            <div class="col-10">
-                                                <div class="row bg-light mb-1" id="LoaNgoai">
-                                                    <div class="col-3">
-                                                        <p>Loa ngoài</p>
-                                                    </div>
-                                                    <div class="col-9">
-                                                        <p>Có</p>
-                                                    </div>
-                                                </div>
+                                            <div class="col-9">
+                                                <p>Có</p>
+                                            </div>
+                                        </div>
 
-                                                <div class="row bg-light" id="Jack3.5">
-                                                    <div class="col-3">
-                                                        <p>Jack 3.5mm</p>
-                                                    </div>
-                                                    <div class="col-9">
-                                                        <p>Có</p>
-                                                    </div>
-                                                </div>
+                                        <div class="row bg-light" id="Jack3.5">
+                                            <div class="col-3">
+                                                <p>Jack 3.5mm</p>
+                                            </div>
+                                            <div class="col-9">
+                                                <p>Có</p>
                                             </div>
                                         </div>
-                                        <div id="BoNhoTrong" class="row mb-1">
-                                            <div class="col-2 bg-secondary">
-                                                <p class="line-height"><strong>Bộ nhớ trong</strong></p>
+                                    </div>
+                                </div>
+                                <div id="BoNhoTrong" class="row mb-1">
+                                    <div class="col-2 bg-secondary">
+                                        <p class="line-height"><strong>Bộ nhớ trong</strong></p>
+                                    </div>
+                                    <div class="col-10">
+                                        <div class="row bg-light mb-1" id="TheNho">
+                                            <div class="col-3">
+                                                <p>Khe cắm thẻ nhớ</p>
                                             </div>
-                                            <div class="col-10">
-                                                <div class="row bg-light mb-1" id="TheNho">
-                                                    <div class="col-3">
-                                                        <p>Khe cắm thẻ nhớ</p>
-                                                    </div>
-                                                    <div class="col-9">
-                                                        <p>MicroSD lên tới 32GB</p>
-                                                    </div>
-                                                </div>
-                                                <div class="row bg-light mb-1" id="ROM">
-                                                    <div class="col-3">
-                                                        <p>Bộ nhớ trong</p>
-                                                    </div>
-                                                    <div class="col-9">
-                                                        <p>4GB</p>
-                                                    </div>
-                                                </div>
+                                            <div class="col-9">
+                                                <p>MicroSD lên tới 32GB</p>
+                                            </div>
+                                        </div>
+                                        <div class="row bg-light mb-1" id="ROM">
+                                            <div class="col-3">
+                                                <p>Bộ nhớ trong</p>
+                                            </div>
+                                            <div class="col-9">
+                                                <p>4GB</p>
+                                            </div>
+                                        </div>
 
-                                                <div class="row bg-light" id="Ram">
-                                                    <div class="col-3">
-                                                        <p>RAM</p>
-                                                    </div>
-                                                    <div class="col-9">
-                                                        <p>768MB</p>
-                                                    </div>
-                                                </div>
+                                        <div class="row bg-light" id="Ram">
+                                            <div class="col-3">
+                                                <p>RAM</p>
+                                            </div>
+                                            <div class="col-9">
+                                                <p>768MB</p>
                                             </div>
                                         </div>
-                                        <div id="XuLy" class="row mb-1">
-                                            <div class="col-2 bg-secondary">
-                                                <p class="line-height"><strong>Xử lý</strong></p>
+                                    </div>
+                                </div>
+                                <div id="XuLy" class="row mb-1">
+                                    <div class="col-2 bg-secondary">
+                                        <p class="line-height"><strong>Xử lý</strong></p>
+                                    </div>
+                                    <div class="col-10">
+                                        <div class="row bg-light mb-1" id="HeDieuHanh">
+                                            <div class="col-3">
+                                                <p>Hệ điều hành</p>
                                             </div>
-                                            <div class="col-10">
-                                                <div class="row bg-light mb-1" id="HeDieuHanh">
-                                                    <div class="col-3">
-                                                        <p>Hệ điều hành</p>
-                                                    </div>
-                                                    <div class="col-9">
-                                                        <p>Android</p>
-                                                    </div>
-                                                </div>
-                                                <div class="row bg-light mb-1" id="ChipSet">
-                                                    <div class="col-3">
-                                                        <p>Chipset</p>
-                                                    </div>
-                                                    <div class="col-9">
-                                                        <p>Qualcomm MSM8225 Snapdragon S4 Play</p>
-                                                    </div>
-                                                </div>
-                                                <div class="row bg-light mb-1" id="CPU">
-                                                    <div class="col-3">
-                                                        <p>CPU</p>
-                                                    </div>
-                                                    <div class="col-9">
-                                                        <p>Dual-core 1 GHz Cortex-A5</p>
-                                                    </div>
-                                                </div>
-                                                <div class="row bg-light mb-1" id="GPU">
-                                                    <div class="col-3">
-                                                        <p>GPU</p>
-                                                    </div>
-                                                    <div class="col-9">
-                                                        <p>Adreno 203</p>
-                                                    </div>
-                                                </div>
-                                                <div class="row bg-light mb-1" id="CamBien">
-                                                    <div class="col-3">
-                                                        <p>Cảm biến</p>
-                                                    </div>
-                                                    <div class="col-9">
-                                                        <p>Gia tốc; Tiệm cận</p>
-                                                    </div>
-                                                </div>
-                                                <div class="row bg-light mb-1" id="TinNhan">
-                                                    <div class="col-3">
-                                                        <p>Tin nhắn</p>
-                                                    </div>
-                                                    <div class="col-9">
-                                                        <p>SMS (threaded view); MMS; Email; Push Email; IM</p>
-                                                    </div>
-                                                </div>
-                                                <div class="row bg-light mb-1" id="web">
-                                                    <div class="col-3">
-                                                        <p>Trình duyệt web</p>
-                                                    </div>
-                                                    <div class="col-9">
-                                                        <p>HTML</p>
-                                                    </div>
-                                                </div>
-                                                <div class="row bg-light" id="Java">
-                                                    <div class="col-3">
-                                                        <p>Java</p>
-                                                    </div>
-                                                    <div class="col-9">
-                                                        <p>via Java MIDP emulator</p>
-                                                    </div>
-                                                </div>
+                                            <div class="col-9">
+                                                <p>Android</p>
                                             </div>
                                         </div>
-                                        <div id="DuLieuvaKetNoi" class="row mb-1">
-                                            <div class="col-2 bg-secondary">
-                                                <p class="line-height"><strong>Dữ liệu và kết nối</strong></p>
+                                        <div class="row bg-light mb-1" id="ChipSet">
+                                            <div class="col-3">
+                                                <p>Chipset</p>
                                             </div>
-                                            <div class="col-10">
-                                                <div class="row bg-light mb-1" id="2G-GPRS">
-                                                    <div class="col-3">
-                                                        <p>2G - GPRS</p>
-                                                    </div>
-                                                    <div class="col-9">
-                                                        <p>85.6 kbps</p>
-                                                    </div>
-                                                </div>
-                                                <div class="row bg-light mb-1" id="2G-EDGE">
-                                                    <div class="col-3">
-                                                        <p>2G - EDGE</p>
-                                                    </div>
-                                                    <div class="col-9">
-                                                        <p>Có, 236.8 kbps</p>
-                                                    </div>
-                                                </div>
-                                                <div class="row bg-light mb-1" id="3G">
-                                                    <div class="col-3">
-                                                        <p>3G-Download/Upload</p>
-                                                    </div>
-                                                    <div class="col-9">
-                                                        <p>7.2Mbps/ 5.76Mbps</p>
-                                                    </div>
-                                                </div>
-                                                <div class="row bg-light mb-1" id="WLAN">
-                                                    <div class="col-3">
-                                                        <p>WLAN</p>
-                                                    </div>
-                                                    <div class="col-9">
-                                                        <p>Wi-Fi 802.11 b/g/n; Wi-Fi hotspot</p>
-                                                    </div>
-                                                </div>
-                                                <div class="row bg-light mb-1" id="Bluetooth">
-                                                    <div class="col-3">
-                                                        <p>Bluetooth</p>
-                                                    </div>
-                                                    <div class="col-9">
-                                                        <p>v3.0, Bluetooth with A2DP</p>
-                                                    </div>
-                                                </div>
-                                                <div class="row bg-light mb-1" id="NFC">
-                                                    <div class="col-3">
-                                                        <p>NFC</p>
-                                                    </div>
-                                                    <div class="col-9">
-                                                        <p>Không</p>
-                                                    </div>
-                                                </div>
-                                                <div class="row bg-light mb-1" id="HongNgoai">
-                                                    <div class="col-3">
-                                                        <p>Cổng hồng ngoại</p>
-                                                    </div>
-                                                    <div class="col-9">
-                                                        <p>Không/p>
-                                                    </div>
-                                                </div>
-                                                <div class="row bg-light mb-1" id="usb">
-                                                    <div class="col-3">
-                                                        <p>USB</p>
-                                                    </div>
-                                                    <div class="col-9">
-                                                        <p>microUSB v2.0</p>
-                                                    </div>
-                                                </div>
-                                                <div class="row bg-light mb-1" id="Radio">
-                                                    <div class="col-3">
-                                                        <p>Radio</p>
-                                                    </div>
-                                                    <div class="col-9">
-                                                        <p>Stereo FM radio</p>
-                                                    </div>
-                                                </div>
+                                            <div class="col-9">
+                                                <p>Qualcomm MSM8225 Snapdragon S4 Play</p>
+                                            </div>
+                                        </div>
+                                        <div class="row bg-light mb-1" id="CPU">
+                                            <div class="col-3">
+                                                <p>CPU</p>
+                                            </div>
+                                            <div class="col-9">
+                                                <p>Dual-core 1 GHz Cortex-A5</p>
+                                            </div>
+                                        </div>
+                                        <div class="row bg-light mb-1" id="GPU">
+                                            <div class="col-3">
+                                                <p>GPU</p>
+                                            </div>
+                                            <div class="col-9">
+                                                <p>Adreno 203</p>
+                                            </div>
+                                        </div>
+                                        <div class="row bg-light mb-1" id="CamBien">
+                                            <div class="col-3">
+                                                <p>Cảm biến</p>
+                                            </div>
+                                            <div class="col-9">
+                                                <p>Gia tốc; Tiệm cận</p>
+                                            </div>
+                                        </div>
+                                        <div class="row bg-light mb-1" id="TinNhan">
+                                            <div class="col-3">
+                                                <p>Tin nhắn</p>
+                                            </div>
+                                            <div class="col-9">
+                                                <p>SMS (threaded view); MMS; Email; Push Email; IM</p>
+                                            </div>
+                                        </div>
+                                        <div class="row bg-light mb-1" id="web">
+                                            <div class="col-3">
+                                                <p>Trình duyệt web</p>
+                                            </div>
+                                            <div class="col-9">
+                                                <p>HTML</p>
+                                            </div>
+                                        </div>
+                                        <div class="row bg-light" id="Java">
+                                            <div class="col-3">
+                                                <p>Java</p>
+                                            </div>
+                                            <div class="col-9">
+                                                <p>via Java MIDP emulator</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="DuLieuvaKetNoi" class="row mb-1">
+                                    <div class="col-2 bg-secondary">
+                                        <p class="line-height"><strong>Dữ liệu và kết nối</strong></p>
+                                    </div>
+                                    <div class="col-10">
+                                        <div class="row bg-light mb-1" id="2G-GPRS">
+                                            <div class="col-3">
+                                                <p>2G - GPRS</p>
+                                            </div>
+                                            <div class="col-9">
+                                                <p>85.6 kbps</p>
+                                            </div>
+                                        </div>
+                                        <div class="row bg-light mb-1" id="2G-EDGE">
+                                            <div class="col-3">
+                                                <p>2G - EDGE</p>
+                                            </div>
+                                            <div class="col-9">
+                                                <p>Có, 236.8 kbps</p>
+                                            </div>
+                                        </div>
+                                        <div class="row bg-light mb-1" id="3G">
+                                            <div class="col-3">
+                                                <p>3G-Download/Upload</p>
+                                            </div>
+                                            <div class="col-9">
+                                                <p>7.2Mbps/ 5.76Mbps</p>
+                                            </div>
+                                        </div>
+                                        <div class="row bg-light mb-1" id="WLAN">
+                                            <div class="col-3">
+                                                <p>WLAN</p>
+                                            </div>
+                                            <div class="col-9">
+                                                <p>Wi-Fi 802.11 b/g/n; Wi-Fi hotspot</p>
+                                            </div>
+                                        </div>
+                                        <div class="row bg-light mb-1" id="Bluetooth">
+                                            <div class="col-3">
+                                                <p>Bluetooth</p>
+                                            </div>
+                                            <div class="col-9">
+                                                <p>v3.0, Bluetooth with A2DP</p>
+                                            </div>
+                                        </div>
+                                        <div class="row bg-light mb-1" id="NFC">
+                                            <div class="col-3">
+                                                <p>NFC</p>
+                                            </div>
+                                            <div class="col-9">
+                                                <p>Không</p>
+                                            </div>
+                                        </div>
+                                        <div class="row bg-light mb-1" id="HongNgoai">
+                                            <div class="col-3">
+                                                <p>Cổng hồng ngoại</p>
+                                            </div>
+                                            <div class="col-9">
+                                                <p>Không/p>
+                                            </div>
+                                        </div>
+                                        <div class="row bg-light mb-1" id="usb">
+                                            <div class="col-3">
+                                                <p>USB</p>
+                                            </div>
+                                            <div class="col-9">
+                                                <p>microUSB v2.0</p>
+                                            </div>
+                                        </div>
+                                        <div class="row bg-light mb-1" id="Radio">
+                                            <div class="col-3">
+                                                <p>Radio</p>
+                                            </div>
+                                            <div class="col-9">
+                                                <p>Stereo FM radio</p>
+                                            </div>
+                                        </div>
 
-                                                <div class="row bg-light" id="GPS">
-                                                    <div class="col-3">
-                                                        <p>GPS</p>
-                                                    </div>
-                                                    <div class="col-9">
-                                                        <p>Có, Hỗ trợ A-GPS</p>
-                                                    </div>
-                                                </div>
+                                        <div class="row bg-light" id="GPS">
+                                            <div class="col-3">
+                                                <p>GPS</p>
+                                            </div>
+                                            <div class="col-9">
+                                                <p>Có, Hỗ trợ A-GPS</p>
                                             </div>
                                         </div>
-                                        <div id="Pin" class="row mb-1">
-                                            <div class="col-2 bg-secondary">
-                                                <p class="line-height"><strong>Pin</strong></p>
+                                    </div>
+                                </div>
+                                <div id="Pin" class="row mb-1">
+                                    <div class="col-2 bg-secondary">
+                                        <p class="line-height"><strong>Pin</strong></p>
+                                    </div>
+                                    <div class="col-10">
+                                        <div class="row bg-light mb-1" id="DungLuongPin">
+                                            <div class="col-3">
+                                                <p>Dung lượng pin</p>
                                             </div>
-                                            <div class="col-10">
-                                                <div class="row bg-light mb-1" id="DungLuongPin">
-                                                    <div class="col-3">
-                                                        <p>Dung lượng pin</p>
-                                                    </div>
-                                                    <div class="col-9">
-                                                        <p>Li-Ion 2000 mAh(BN-02)</p>
-                                                    </div>
-                                                </div>
-                                                <div class="row bg-light mb-1" id="ThoiGianCho">
-                                                    <div class="col-3">
-                                                        <p>Thời gian chờ</p>
-                                                    </div>
-                                                    <div class="col-9">
-                                                        <p>Lên tới 720 giờ</p>
-                                                    </div>
-                                                </div>
-                                                <div class="row bg-light mb-1" id="ThoiGianThoai">
-                                                    <div class="col-3">
-                                                        <p>Thời gian thoại</p>
-                                                    </div>
-                                                    <div class="col-9">
-                                                        <p>Lên tới 16 giờ(2G)/Lên tới 13giờ (3G)</p>
-                                                    </div>
-                                                </div>
+                                            <div class="col-9">
+                                                <p>Li-Ion 2000 mAh(BN-02)</p>
+                                            </div>
+                                        </div>
+                                        <div class="row bg-light mb-1" id="ThoiGianCho">
+                                            <div class="col-3">
+                                                <p>Thời gian chờ</p>
+                                            </div>
+                                            <div class="col-9">
+                                                <p>Lên tới 720 giờ</p>
+                                            </div>
+                                        </div>
+                                        <div class="row bg-light mb-1" id="ThoiGianThoai">
+                                            <div class="col-3">
+                                                <p>Thời gian thoại</p>
+                                            </div>
+                                            <div class="col-9">
+                                                <p>Lên tới 16 giờ(2G)/Lên tới 13giờ (3G)</p>
+                                            </div>
+                                        </div>
 
-                                                <div class="row bg-light" id="ThoiGianNgheNhac">
-                                                    <div class="col-3">
-                                                        <p>Thời gian nghe nhạc</p>
-                                                    </div>
-                                                    <div class="col-9">
-                                                        <p>Lên tới 37 giờ</p>
-                                                    </div>
-                                                </div>
+                                        <div class="row bg-light" id="ThoiGianNgheNhac">
+                                            <div class="col-3">
+                                                <p>Thời gian nghe nhạc</p>
+                                            </div>
+                                            <div class="col-9">
+                                                <p>Lên tới 37 giờ</p>
                                             </div>
                                         </div>
-                                        <div id="TinhNangKhac" class="row mb-1">
-                                            <div class="col-2 bg-secondary">
-                                                <p class="line-height"><strong>Tính năng khác</strong></p>
+                                    </div>
+                                </div>
+                                <div id="TinhNangKhac" class="row mb-1">
+                                    <div class="col-2 bg-secondary">
+                                        <p class="line-height"><strong>Tính năng khác</strong></p>
+                                    </div>
+                                    <div class="col-10">
+                                        <div class="row bg-light mb-1" id="DinhDangAmThanh">
+                                            <div class="col-3">
+                                                <p>Định dạng âm thanh</p>
                                             </div>
-                                            <div class="col-10">
-                                                <div class="row bg-light mb-1" id="DinhDangAmThanh">
-                                                    <div class="col-3">
-                                                        <p>Định dạng âm thanh</p>
-                                                    </div>
-                                                    <div class="col-9">
-                                                        <p>MP3/ WAV/ eAAC+/ Flac</p>
-                                                    </div>
-                                                </div>
-                                                <div class="row bg-light mb-1" id="DinhDangVideo">
-                                                    <div class="col-3">
-                                                        <p>Định dạng video</p>
-                                                    </div>
-                                                    <div class="col-9">
-                                                        <p>MP4/ H.263/ H.264</p>
-                                                    </div>
-                                                </div>
-                                                <div class="row bg-light mb-1" id="XuLyHinhAnh">
-                                                    <div class="col-3">
-                                                        <p>Xử lý hình ảnh</p>
-                                                    </div>
-                                                    <div class="col-9">
-                                                        <p>Biên tập hình ảnh</p>
-                                                    </div>
-                                                </div>
-                                                <div class="row bg-light mb-1" id="XuLyVanBan">
-                                                    <div class="col-3">
-                                                        <p>Xử lý văn bản</p>
-                                                    </div>
-                                                    <div class="col-9">
-                                                        <p>Đọc văn bản; Đoán chữ thông minh</p>
-                                                    </div>
-                                                </div>
-                                                <div class="row bg-light mb-1" id="GiongNoi">
-                                                    <div class="col-3">
-                                                        <p>Ra lệnh bằng giọng nói</p>
-                                                    </div>
-                                                    <div class="col-9">
-                                                        <p>Ghi âm/quay số bằng giọng nói</p>
-                                                    </div>
-                                                </div>
-                                                <div class="row bg-light mb-1" id="MXH">
-                                                    <div class="col-3">
-                                                        <p>Tích hợp mạng xã hội</p>
-                                                    </div>
-                                                    <div class="col-9">
-                                                        <p>SNS integration</p>
-                                                    </div>
-                                                </div>
-                                                <div class="row bg-light" id="ChongOn">
-                                                    <div class="col-3">
-                                                        <p>Micro chống ồn</p>
-                                                    </div>
-                                                    <div class="col-9">
-                                                        <p>Lọc tiếng ồn với micro chuyên dụng</p>
-                                                    </div>
-                                                </div>
+                                            <div class="col-9">
+                                                <p>MP3/ WAV/ eAAC+/ Flac</p>
+                                            </div>
+                                        </div>
+                                        <div class="row bg-light mb-1" id="DinhDangVideo">
+                                            <div class="col-3">
+                                                <p>Định dạng video</p>
+                                            </div>
+                                            <div class="col-9">
+                                                <p>MP4/ H.263/ H.264</p>
+                                            </div>
+                                        </div>
+                                        <div class="row bg-light mb-1" id="XuLyHinhAnh">
+                                            <div class="col-3">
+                                                <p>Xử lý hình ảnh</p>
+                                            </div>
+                                            <div class="col-9">
+                                                <p>Biên tập hình ảnh</p>
+                                            </div>
+                                        </div>
+                                        <div class="row bg-light mb-1" id="XuLyVanBan">
+                                            <div class="col-3">
+                                                <p>Xử lý văn bản</p>
+                                            </div>
+                                            <div class="col-9">
+                                                <p>Đọc văn bản; Đoán chữ thông minh</p>
+                                            </div>
+                                        </div>
+                                        <div class="row bg-light mb-1" id="GiongNoi">
+                                            <div class="col-3">
+                                                <p>Ra lệnh bằng giọng nói</p>
+                                            </div>
+                                            <div class="col-9">
+                                                <p>Ghi âm/quay số bằng giọng nói</p>
+                                            </div>
+                                        </div>
+                                        <div class="row bg-light mb-1" id="MXH">
+                                            <div class="col-3">
+                                                <p>Tích hợp mạng xã hội</p>
+                                            </div>
+                                            <div class="col-9">
+                                                <p>SNS integration</p>
+                                            </div>
+                                        </div>
+                                        <div class="row bg-light" id="ChongOn">
+                                            <div class="col-3">
+                                                <p>Micro chống ồn</p>
+                                            </div>
+                                            <div class="col-9">
+                                                <p>Lọc tiếng ồn với micro chuyên dụng</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-
+                            <!-- </div> -->
                         </div>
-                        <!-- <ul class="nav nav-tabs">
-                                <li class="active"><a data-toggle="tab" href="#home">Home</a></li>
-                                <li><a data-toggle="tab" href="#menu1">Menu 1</a></li>
-                                <li><a data-toggle="tab" href="#menu2">Menu 2</a></li>
-                                <li><a data-toggle="tab" href="#menu3">Menu 3</a></li>
-                              </ul>
-                            
-                              <div class="tab-content">
-                                <div id="home" class="tab-pane fade in active">
-                                  <h3>HOME</h3>
-                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                </div>
-                                <div id="menu1" class="tab-pane fade">
-                                  <h3>Menu 1</h3>
-                                  <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                                </div>
-                                <div id="menu2" class="tab-pane fade">
-                                  <h3>Menu 2</h3>
-                                  <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
-                                </div>
-                                <div id="menu3" class="tab-pane fade">
-                                  <h3>Menu 3</h3>
-                                  <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-                                </div>
-                              </div> -->
+
+                        <!-- </div> -->
+
 
 
                     </div>
@@ -869,6 +847,25 @@
                 <p style="line-height: 18px">P & P Communications jsc tự hào về những dự án đã làm và được nhận tiếp
                     tục hợp tác dài hạn. Dù đối tác ở khu vực nào, với quy mô như thế nào
                     hoặc định hướng phát triển ra sao chúng tôi vẫn luôn niềm nở phục vụ tinh thần đóng góp.</p>
+                <!-- <div class="container-fluid">
+                        <div id="owl-demo">
+                            <div class="item">
+                                <a href="#"><img src="images/blackberry.png" alt=""></a>
+                            </div>
+                            <div class="item">
+                                <a href="#"><img src="images/LGlogo.png" alt=""></a>
+                            </div>
+                            <div class="item">
+                                <a href="#"><img src="images/samsung.png" alt=""></a>
+                            </div>
+                            <div class="item">
+                                <a href="#"><img src="images/Sony_Ericsson85.png" alt=""></a>
+                            </div>
+                            <div class="item">
+                                <a href="#"><img src="images/nokia_logo.jpeg" alt=""></a>
+                            </div>
+                        </div>
+                    </div> -->
             </div>
             <div class="bg-color-1" style="height:4px">
             </div>
@@ -952,10 +949,11 @@
                             <h6>CÔNG TY TNHH PHÁT TRIỂN CÔNG NGHỆ RUNTIME</h6>
                         </div>
                         <div>
-                            <span> 5/12A Quang Trung, P.14, Q.Gò Vấp, Tp.Hồ Chí Minh</span> <br>
-                            <span> (08) 66 85 85 38</span> <br>
-                            <span>info@runtime.vn</span> <br>
-                            <span> http://www.runtime.vn</span> <br>
+                            <span><i class="fas fa-map-marker-alt color-1"></i> 5/12A Quang Trung, P.14, Q.Gò Vấp,
+                                Tp.Hồ Chí Minh</span> <br>
+                            <span><i class="fa fa-phone color-1"></i> (08) 66 85 85 38</span> <br>
+                            <span><i class="fas fa-envelope color-1"></i> info@runtime.vn</span> <br>
+                            <span><i class="fas fa-globe color-1"></i> http://www.runtime.vn</span> <br>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-12">
@@ -981,16 +979,16 @@
                         </div>
                     </div>
                 </div>
-                <div class="text-center">
+                <div id="connect" class="text-center">
                     <a href="#">
                         <span class="fa-stack fa-lg">
-                            <i class="fa fa-circle fa-stack-2x circle" id="google"></i>
+                            <i class="fa fa-circle fa-stack-2x circle" style="color:#a43c30"></i>
                             <i class="fab fa-google-plus-g fa-stack-1x fa-inverse icon"></i>
                         </span>
                     </a>
                     <a href="#">
                         <span class="fa-stack fa-lg">
-                            <i class="fa fa-circle fa-stack-2x circle" id="twitter"></i>
+                            <i class="fa fa-circle fa-stack-2x circle" id="twitter" sty></i>
                             <i class="fab fa-twitter fa-stack-1x fa-inverse icon"></i>
                         </span>
                     </a>
@@ -1014,12 +1012,14 @@
         </div>
         <!-- <button class="btn btn-danger" id="clickMe">click me</button> -->
     </footer>
-
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script> -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script> -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script>
+        // $("#SoLuong").spinner();
+    </script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script> -->
 </body>
 
 </html>
