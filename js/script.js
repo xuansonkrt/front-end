@@ -5,7 +5,7 @@ jQuery(document).ready(function($){
         this.hide();
     });
     $(".fa-stack").hover(function(){
-        $(this).find("i:first").addClass("color-4");
+        $(this).find(".circle").addClass("color-4");
         $(this).find(".icon").addClass("color-3");
     },function(){
         $(this).find(".circle").removeClass("color-4");
@@ -23,4 +23,6 @@ jQuery(document).ready(function($){
         step:1
     });
 
+  
+    // $('[data-toggle="popover"]').popover(); 
 });
