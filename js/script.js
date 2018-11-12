@@ -17,6 +17,8 @@ jQuery(document).ready(function($){
         
     });
     $("#tabs").tabs();
+    $("#tabs-img").tabs();
+
     $("#SoLuong").spinner({
         min:1,
         max:100,
@@ -30,5 +32,11 @@ jQuery(document).ready(function($){
         zoomWindowFadeIn: 500,
         zoomWindowFadeOut: 750
     }); 
+    $("#zoom_02").elevateZoom({
+        zoomType: "inner",
+        cursor: "crosshair",
+        zoomWindowFadeIn: 500,
+        zoomWindowFadeOut: 750
+    });
     // $('[data-toggle="popover"]').popover(); 
 });
