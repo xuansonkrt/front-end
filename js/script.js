@@ -1,5 +1,13 @@
 
 jQuery(document).ready(function ($) {
+    function len(obj) // do dai cua object
+                {
+                    var x;
+                    var count=0;
+                    for(x in obj)
+                        count++;
+                    return count;
+                }
     $("#clickMe").click(function () {
         alert("click me");
         this.hide();
@@ -67,8 +75,9 @@ jQuery(document).ready(function ($) {
                 row.append(col1);
                 var col2 = $("<div></div>"); //col right chi tiết
                 col2.addClass("col-10 bg-white");
+                var i=0;
                 for (y in data[x]) {
-                    var i=0;
+                    
                     var rowSub = $("<div></div>");
                     rowSub.addClass("row bg-light mb-1");
                     var colSub1 = $("<div></div>");
@@ -81,9 +90,24 @@ jQuery(document).ready(function ($) {
                     rowSub.append(colSub2);
                     col2.append(rowSub);
                     i++;
-                    
-                }
+                    // alert(typeof(data[x])); //object
+                    // var myJson=JSON.parse(data[x]);
+                    // alert((len(data[x])));
+                    if(i==len(data[x]))
+                        {
+                            rowSub.removeClass("mb-1");
+                            i=0;
+                        }
 
+                }
+                function len(obj)
+                {
+                    var x;
+                    var count=0;
+                    for(x in obj)
+                        count++;
+                    return count;
+                }
                 row.append(col1);
                 row.append(col2);
                 $("#ThongSo").append(row);
