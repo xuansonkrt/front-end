@@ -96,6 +96,7 @@ li{
     z-index: 2;
     left: -39px;
     bottom: 2px;
+
     float: right;
 }   
 .demo{
@@ -170,6 +171,34 @@ p{
  button[class~="bg-color-2"]:hover{
      background-color: #547404;
  }
+ .img-prod{
+     object-fit: fill;
+ }
+
+.img-prod:hover{
+    /* -ms-transform: scale(0.02, 0.03); IE 9 */
+    /* -webkit-transform: scale(0.02, 0.03)scale(2, 3); Safari */
+    transform: scale(1.1, 1.1);
+}
+a:hover{
+    text-decoration: none;
+    color:#db4940 !important;
+}
+div[class~="bg-color-2"] a:hover{
+
+    color:#db4940 !important;
+}
+div[class~="bg-color-1"] a:hover{
+
+    color:#a8cf45 !important;
+}
+.color-2:hover{
+    color: #547404;
+    
+}
+
+/* demo awl */
+
 
 
   @media screen and (max-width:990px)

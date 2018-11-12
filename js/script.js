@@ -23,6 +23,12 @@ jQuery(document).ready(function($){
         step:1
     });
 
-  
+    $("#owl-DoiTac").load("owl-DoiTac.html");
+    $("#zoom_01").elevateZoom({
+        zoomType: "inner",
+        cursor: "crosshair",
+        zoomWindowFadeIn: 500,
+        zoomWindowFadeOut: 750
+    }); 
     // $('[data-toggle="popover"]').popover(); 
 });

@@ -12,11 +12,7 @@
     <title>NOKIA</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-
-   
-    <script src="js/owl.carousel.js"></script>
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <!-- <link rel="stylesheet" href="css/owl.theme.default.min.css"> -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <!-- <link rel="stylesheet" href="css/jquery-ui.css"> -->
     <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.4.2/css/all.css' integrity='sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns'
@@ -27,7 +23,7 @@
 
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-
+    <script src="js/jquery.elevatezoom.js"></script>
 
     <script src="js/script.js"></script>
     <link rel="stylesheet" href="css/style.css">
@@ -156,13 +152,15 @@
                     <div class="float-sm-right">
                         <ul>
                             <li class="pr-3">
-                                <a href="#"> <i class="fas fa-edit"></i>Kiểm tra đơn hàng</a>
+                                <a href="#" class="color-2"> <i class="fas fa-edit"></i>Kiểm tra đơn hàng</a>
                             </li>
                             <li class="pr-3">
-                                <a href="#" id="navbardrop" class="dropdown-toggle" data-toggle="dropdown"> Tài khoản</a>
+                                <a href="#" id="navbardrop" class="dropdown-toggle color-2" data-toggle="dropdown"> Tài
+                                    khoản</a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="#" class="dropdown-item"> <i class="far fa-user-circle"></i> Đăng nhập</a></li>
-                                    <li><a href="#" class="dropdown-item "><i class="fas fa-plus"></i> Đăng kí</a></li>
+                                    <li><a href="#" class="dropdown-item color-2"> <i class="far fa-user-circle"></i>
+                                            Đăng nhập</a></li>
+                                    <li><a href="#" class="dropdown-item  color-2"><i class="fas fa-plus"></i> Đăng kí</a></li>
                                 </ul>
                             </li>
                             <li>
@@ -199,7 +197,8 @@
                 <div id="main-left" class="col-lg-9 col-md-12 col-sm-12">
                     <div id="summary" class="row">
                         <div id="pictures bg-light" class="p-2 rounded col-lg-5 col-md-12 col-sm-12  bg-light">
-                            <img src="images/nokia.jpg" alt="" width="100%">
+                            <img id="zoom_01" width="100%" src="images/nokia.jpg" data-zoom-image="images/nokia.jpg">
+                           
                         </div>
                         <div id="brief" class="col-lg-7 col-md-12 col-sm-12 px-5">
                             <h5 id="nameProd" class="border-bottom-ct">NOKIA XL (CTY)</h5>
@@ -289,15 +288,15 @@
                                     trên chiếc Nokia XL này.</p>
                             </div>
                             <div id="ThongSo">
-                                <div id="TongQuan" class="row mb-1">
-                                    <div class="col-2  bg-secondary ">
-                                        <div class="h-100 my-auto">
-                                            <p class=""><strong>Tổng quan</strong></p>
+                                <div id="TongQuan" class="row mb-1 bg-secondary">
+                                    <div class="col-2  bg-secondary my-auto">
+                                        <div class="h-100 ">
+                                            <p class="text-white"><strong>Tổng quan</strong></p>
 
                                         </div>
 
                                     </div>
-                                    <div class="col-10">
+                                    <div class="col-10 bg-white">
                                         <div class="row bg-light mb-1" id="Mang2G">
                                             <div class="col-3">
                                                 <p>Mạng 2G</p>
@@ -348,11 +347,11 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div id="Camera" class="row mb-1">
-                                    <div class="col-2 bg-secondary">
-                                        <p class="line-height"><strong>Camera</strong></p>
+                                <div id="Camera" class="row mb-1 bg-secondary">
+                                    <div class="col-2 bg-secondary my-auto">
+                                        <p class="text-white"><strong>Camera</strong></p>
                                     </div>
-                                    <div class="col-10">
+                                    <div class="col-10 bg-white">
                                         <div class="row bg-light mb-1" id="DoPhanGiai">
                                             <div class="col-3">
                                                 <p>Độ phân giải</p>
@@ -398,13 +397,13 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div id="ManHinh" class="row mb-1">
-                                    <div class="col-2 bg-secondary">
-                                        <div class="my-auto">
-                                            <p class=""><strong>Màn hình</strong></p>
+                                <div id="ManHinh" class="row mb-1 bg-secondary">
+                                    <div class="col-2 bg-secondary my-auto">
+                                        <div class="my-auto ">
+                                            <p class="text-light"><strong>Màn hình</strong></p>
                                         </div>
                                     </div>
-                                    <div class="col-10">
+                                    <div class="col-10 bg-white">
                                         <div class="row bg-light mb-1" id="CongNghe">
                                             <div class="col-3">
                                                 <p>Công nghệ</p>
@@ -448,11 +447,11 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div id="ThietKe" class="row mb-1">
-                                    <div class="col-2 bg-secondary">
-                                        <p class="line-height"><strong>Thiết kế</strong></p>
+                                <div id="ThietKe" class="row mb-1 bg-secondary">
+                                    <div class="col-2 bg-secondary my-auto">
+                                        <p class="text-white"><strong>Thiết kế</strong></p>
                                     </div>
-                                    <div class="col-10">
+                                    <div class="col-10 bg-white">
                                         <div class="row bg-light mb-1" id="KichThuoc">
                                             <div class="col-3">
                                                 <p>Kích thước (mm)</p>
@@ -488,11 +487,11 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div id="AmThanh" class="row mb-1">
-                                    <div class="col-2 bg-secondary">
-                                        <p class="line-height"><strong>Âm thanh</strong></p>
+                                <div id="AmThanh" class="row mb-1 bg-secondary">
+                                    <div class="col-2 my-auto">
+                                        <p class="text-white"><strong>Âm thanh</strong></p>
                                     </div>
-                                    <div class="col-10">
+                                    <div class="col-10 bg-white">
                                         <div class="row bg-light mb-1" id="LoaNgoai">
                                             <div class="col-3">
                                                 <p>Loa ngoài</p>
@@ -512,11 +511,11 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div id="BoNhoTrong" class="row mb-1">
-                                    <div class="col-2 bg-secondary">
-                                        <p class="line-height"><strong>Bộ nhớ trong</strong></p>
+                                <div id="BoNhoTrong" class="row mb-1 bg-secondary">
+                                    <div class="col-2 my-auto">
+                                        <p class="text-white"><strong>Bộ nhớ trong</strong></p>
                                     </div>
-                                    <div class="col-10">
+                                    <div class="col-10 bg-white">
                                         <div class="row bg-light mb-1" id="TheNho">
                                             <div class="col-3">
                                                 <p>Khe cắm thẻ nhớ</p>
@@ -544,11 +543,11 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div id="XuLy" class="row mb-1">
-                                    <div class="col-2 bg-secondary">
-                                        <p class="line-height"><strong>Xử lý</strong></p>
+                                <div id="XuLy" class="row mb-1 bg-secondary">
+                                    <div class="col-2 my-auto">
+                                        <p class="text-white"><strong>Xử lý</strong></p>
                                     </div>
-                                    <div class="col-10">
+                                    <div class="col-10 bg-white">
                                         <div class="row bg-light mb-1" id="HeDieuHanh">
                                             <div class="col-3">
                                                 <p>Hệ điều hành</p>
@@ -615,11 +614,11 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div id="DuLieuvaKetNoi" class="row mb-1">
-                                    <div class="col-2 bg-secondary">
-                                        <p class="line-height"><strong>Dữ liệu và kết nối</strong></p>
+                                <div id="DuLieuvaKetNoi" class="row mb-1 bg-secondary">
+                                    <div class="col-2 my-auto">
+                                        <p class="text-white"><strong>Dữ liệu và kết nối</strong></p>
                                     </div>
-                                    <div class="col-10">
+                                    <div class="col-10 bg-white">
                                         <div class="row bg-light mb-1" id="2G-GPRS">
                                             <div class="col-3">
                                                 <p>2G - GPRS</p>
@@ -703,11 +702,11 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div id="Pin" class="row mb-1">
-                                    <div class="col-2 bg-secondary">
-                                        <p class="line-height"><strong>Pin</strong></p>
+                                <div id="Pin" class="row mb-1 bg-secondary">
+                                    <div class="col-2 my-auto">
+                                        <p class="text-white"><strong>Pin</strong></p>
                                     </div>
-                                    <div class="col-10">
+                                    <div class="col-10 bg-white">
                                         <div class="row bg-light mb-1" id="DungLuongPin">
                                             <div class="col-3">
                                                 <p>Dung lượng pin</p>
@@ -743,11 +742,11 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div id="TinhNangKhac" class="row mb-1">
-                                    <div class="col-2 bg-secondary">
-                                        <p class="line-height"><strong>Tính năng khác</strong></p>
+                                <div id="TinhNangKhac" class="row mb-1 bg-secondary">
+                                    <div class="col-2 my-auto">
+                                        <p class="text-white"><strong>Tính năng khác</strong></p>
                                     </div>
-                                    <div class="col-10">
+                                    <div class="col-10  bg-white">
                                         <div class="row bg-light mb-1" id="DinhDangAmThanh">
                                             <div class="col-3">
                                                 <p>Định dạng âm thanh</p>
@@ -846,6 +845,33 @@
                         </div>
                     </div>
                     <h6 style="border-bottom: 1px solid black">SẢN PHẨM HOT</h6>
+                    <div class="product text-center pb-3">
+                        <a href="#"> <img src="images/nokia-925.jpg" alt="Nokia Lumia 925" class="w-100 img-prod p-3"></a>
+                        <a href="#">NOKIA LUMIA 925(CTY)</a> <br>
+                        <span><strong>7.704.000 ₫</strong></span>
+                        <span style="text-decoration: line-through" class="pl-2">8.560.000 ₫</span>
+                        <br>
+                        <button class="btn btn-outline-success ">Mua</button>
+                    </div>
+
+                    <div class="product text-center pb-3">
+                        <a href="#"> <img src="images/samsung core 2.jpg" alt="Nokia Lumia 925" class="w-100 img-prod p-3"></a>
+                        <a href="#">SAMSUNG GALAXY CORE 2 - G355 (CTY)</a> <br>
+                        <span><strong>3.040.000 ₫</strong></span>
+                        <span style="text-decoration: line-through" class="pl-2">3.200.000 ₫</span>
+                        <br>
+                        <button class="btn btn-outline-success ">Mua</button>
+                    </div>
+
+                    <div class="product text-center pb-3">
+                        <a href="#"> <img src="images/samsung-note-3.png" alt="Nokia Lumia 925" class="w-100 img-prod p-3"></a>
+                        <a href="#">SAMSUNG GALAXY NOTE 3 NEO - N7500 (CTY)</a> <br>
+                        <span><strong>7.039.500 ₫</strong></span>
+                        <span style="text-decoration: line-through" class="pl-2">7.410.000 ₫</span>
+                        <br>
+                        <button class="btn btn-outline-success ">Mua</button>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -853,29 +879,14 @@
     <footer>
         <div id="info" class="container-fluid bg-light p-0">
             <div id="doiTac" class="container py-3">
+
                 <h3 class="color-2">ĐỐI TÁC</h3>
                 <p style="line-height: 18px">P & P Communications jsc tự hào về những dự án đã làm và được nhận tiếp
                     tục hợp tác dài hạn. Dù đối tác ở khu vực nào, với quy mô như thế nào
                     hoặc định hướng phát triển ra sao chúng tôi vẫn luôn niềm nở phục vụ tinh thần đóng góp.</p>
-                <!-- <div class="container-fluid"> -->
-                <!-- <div class="owl-carousel owl-theme">
-                    <div class="item">
-                        <a href="#"><img src="images/blackberry.png" alt=""></a>
-                    </div>
-                    <div class="item">
-                        <a href="#"><img src="images/LGlogo.png" alt=""></a>
-                    </div>
-                    <div class="item">
-                        <a href="#"><img src="images/samsung.png" alt=""></a>
-                    </div>
-                    <div class="item">
-                        <a href="#"><img src="images/Sony_Ericsson85.png" alt=""></a>
-                    </div>
-                    <div class="item">
-                        <a href="#"><img src="images/nokia_logo.jpeg" alt=""></a>
-                    </div>
-                </div> -->
-                <!-- </div> -->
+                <div id="owl-DoiTac">
+                    <!-- ajax load -->
+                </div>
             </div>
             <div class="bg-color-1" style="height:4px">
             </div>
@@ -926,15 +937,17 @@
                         </div>
                         <div class="col-lg-4 col-md-12">
                             <div class="input-group mb-3 my-auto float-lg-right">
-                                <input id="emailSignup" width="100%" type="text" class="form-control" placeholder="Nhập Email đăng ký khuyến mại">
-                                <div id="plane" class="input-group-append">
-                                    <a href="#">
-                                        <span class="fa-stack fa-lg">
-                                            <i class="fa fa-circle fa-stack-2x color-1 circle" id=""></i>
-                                            <i class="fa fa-paper-plane fa-stack-1x fa-inverse color-2 icon"></i>
-                                        </span>
-                                    </a>
-                                </div>
+                                <!-- <div class=""> -->
+                                    <input id="emailSignup"  type="text" class="form-control" placeholder="Nhập Email đăng ký khuyến mại">
+                                    <div id="plane" class="input-group-append">
+                                        <a href="#">
+                                            <span class="fa-stack fa-lg">
+                                                <i class="fa fa-circle fa-stack-2x color-1 circle" id=""></i>
+                                                <i class="fa fa-paper-plane fa-stack-1x fa-inverse color-2 icon"></i>
+                                            </span>
+                                        </a>
+                                    </div>
+                                <!-- </div> -->
                             </div>
 
                             <!-- <div class="mb-3 my-auto ">
@@ -954,7 +967,7 @@
             </div>
             <div class="container py-4">
                 <div class="row">
-                    <div class="col-lg-4 col-md-12">
+                    <div class="col-lg-4 col-md-12 pb-3">
                         <div class="border-bottom border-dark">
                             <h6>CÔNG TY TNHH PHÁT TRIỂN CÔNG NGHỆ RUNTIME</h6>
                         </div>
@@ -966,7 +979,7 @@
                             <span><i class="fas fa-globe color-1"></i> http://www.runtime.vn</span> <br>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-12">
+                    <div class="col-lg-4 col-md-12 pb-3">
                         <div class="border-bottom border-dark">
                             <h6>HỖ TRỢ KHÁCH HÀNG</h6>
                         </div>
@@ -977,7 +990,7 @@
                             <a href="#"><i class="fa fa-caret-right color-1"></i> Quy định bảo hành</a>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-12">
+                    <div class="col-lg-4 col-md-12 pb-3">
                         <div class="border-bottom border-dark">
                             <h6>THÔNG TIN</h6>
                         </div>
