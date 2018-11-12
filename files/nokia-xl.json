@@ -1,96 +1,76 @@
 {
-    "Tổng quan": [
-        {
-            "Mạng 2G": "GSM 850 / 900 / 1800 / 1900 - SIM 1 & SIM 2",
-            "Mạng 3G": "HSDPA 900/2100",
-            "SIM": "Micro SIM, 2 SIM",
-            "Công bố": "Tháng 2/2014",
-            "Phát hành": "Tháng 5/2014",
-            "Ngôn ngữ": "Đa ngôn ngữ (có tiếng Việt)",
-        }
-    ],
-    "Camera": [
-        {
-            "Độ phân giải": "5 MP; 2592 х 1944 pixels",
-            "Led flash": "Led flash",
-            "Tính năng": "Kích thước cảm biến 1/4''; Tự động lấy nét; Nhận diện khuôn mặt; Bức tranh toàn cảnh",
-            "Quay video": "480p@30fps",
-            "Camera phụ": "2 MP"
-        }
-    ],
-    "Màn hình": [
-        {
-            "Công nghệ": "IPS LCD, 16 triệu màu",
-            "Kích thước": "5.0 inches",
-            "Độ phân giải": "480 x 800 pixels",
-            "Mật độ điểm ảnh": "187 ppi",
-            "Cảm ứng đa điểm": "Cảm ứng điện dung"
-        }
-    ],
-    "Thiết kế": [
-        {
-            "Kích thước (mm)": "141.4 x 77.7 x 10.9 mm",
-            "Khối lượng (gram)": "190 g",
-            "Chất liệu": "Nhựa cao cấp",
-            "Màu sắc": "Xanh lá, Trắng, Đen, Cam, Vàng, Xanh da trời"
-        }
-    ],
-    "Âm thanh": [
-        {
-            "Loa ngoài": "Có",
-            "Jack 3.5mm": "Có"
-        }
-    ],
-    "Bộ nhớ": [
-        {
-            "Khe cắm thẻ nhớ": "MicroSD lên tới 32GB",
-            "Bộ nhớ trong": "4GB",
-            "RAM": "768MB"
-        }
-    ],
-    "Xử lý": [
-        {
-            "Hệ điều hành": "Android",
-            "Chipset": "Qualcomm MSM8225 Snapdragon S4 Play",
-            "CPU Dual-core": "1 GHz Cortex-A5",
-            "GPU": "Adreno 203",
-            "Cảm biến": "Gia tốc; Tiệm cận",
-            "Tin nhắn": "SMS (threaded view); MMS; Email; Push Email; IM",
-            "Trình duyệt web": "HTML",
-            "Java": "via Java MIDP emulator"
-        }
-    ],
-    "Dữ liệu và kết nối": [
-        {
-            "2G - GPRS": "85.6 kbps",
-            "2G - EDGE": "Có, 236.8 kbps",
-            "3G - Download/Uploa": "7.2Mbps/ 5.76Mbps",
-            "WLAN": "Wi-Fi 802.11 b/g/n; Wi-Fi hotspot",
-            "Bluetooth": "v3.0, Bluetooth with A2DP",
-            "NFC": "Không",
-            "Cổng hồng ngoại": "Không",
-            "USB": "microUSB v2.0",
-            "Radio": "Stereo FM radio",
-            "GPS": "Có, Hỗ trợ A-GPS"
-        }
-    ],
-    "Pin": [
-        {
-            "Dung lượng pin": "Li-Ion 2000 mAh(BN-02)",
-            "Thời gian chờ": "Lên tới 720 giờ",
-            "Thời gian thoại": "Lên tới 16 giờ(2G)/Lên tới 13giờ (3G)",
-            "Thời gian nghe nhạc": "Lên tới 37 giờ"
-        }
-    ],
-    "Tính năng khác": [
-        {
-            "Định dạng âm thanh": "MP3/ WAV/ eAAC+/ Flac",
-            "Định dạng video": "MP4/ H.263/ H.264",
-            "Xử lý hình ảnh": "Biên tập hình ảnh",
-            "Xử lý văn bản": "Đọc văn bản; Đoán chữ thông minh",
-            "Ra lệnh bằng giọng nói": "Ghi âm/quay số bằng giọng nói",
-            "Tích hợp mạng xã hội": "SNS integration",
-            "Micro chống ồn": "Lọc tiếng ồn với micro chuyên dụng",
-        }
-    ]
+    "Tổng quan": {
+        "Mạng 2G": "GSM 850 / 900 / 1800 / 1900 - SIM 1 & SIM 2",
+        "Mạng 3G": "HSDPA 900/2100",
+        "SIM": "Micro SIM, 2 SIM",
+        "Công bố": "Tháng 2/2014",
+        "Phát hành": "Tháng 5/2014",
+        "Ngôn ngữ": "Đa ngôn ngữ (có tiếng Việt)"
+    },
+    "Camera": {
+        "Độ phân giải": "5 MP; 2592 х 1944 pixels",
+        "Led flash": "Led flash",
+        "Tính năng": "Kích thước cảm biến 1/4''; Tự động lấy nét; Nhận diện khuôn mặt; Bức tranh toàn cảnh",
+        "Quay video": "480p@30fps",
+        "Camera phụ": "2 MP"
+    },
+    "Màn hình": {
+        "Công nghệ": "IPS LCD, 16 triệu màu",
+        "Kích thước": "5.0 inches",
+        "Độ phân giải": "480 x 800 pixels",
+        "Mật độ điểm ảnh": "187 ppi",
+        "Cảm ứng đa điểm": "Cảm ứng điện dung"
+    },
+    "Thiết kế": {
+        "Kích thước (mm)": "141.4 x 77.7 x 10.9 mm",
+        "Khối lượng (gram)": "190 g",
+        "Chất liệu": "Nhựa cao cấp",
+        "Màu sắc": "Xanh lá, Trắng, Đen, Cam, Vàng, Xanh da trời"
+    },
+    "Âm thanh": {
+        "Loa ngoài": "Có",
+        "Jack 3.5mm": "Có"
+    },
+    "Bộ nhớ": {
+        "Khe cắm thẻ nhớ": "MicroSD lên tới 32GB",
+        "Bộ nhớ trong": "4GB",
+        "RAM": "768MB"
+    },
+    "Xử lý": {
+        "Hệ điều hành": "Android",
+        "Chipset": "Qualcomm MSM8225 Snapdragon S4 Play",
+        "CPU Dual-core": "1 GHz Cortex-A5",
+        "GPU": "Adreno 203",
+        "Cảm biến": "Gia tốc; Tiệm cận",
+        "Tin nhắn": "SMS (threaded view); MMS; Email; Push Email; IM",
+        "Trình duyệt web": "HTML",
+        "Java": "via Java MIDP emulator"
+    },
+    "Dữ liệu và kết nối": {
+        "2G - GPRS": "85.6 kbps",
+        "2G - EDGE": "Có, 236.8 kbps",
+        "3G - Download/Uploa": "7.2Mbps/ 5.76Mbps",
+        "WLAN": "Wi-Fi 802.11 b/g/n; Wi-Fi hotspot",
+        "Bluetooth": "v3.0, Bluetooth with A2DP",
+        "NFC": "Không",
+        "Cổng hồng ngoại": "Không",
+        "USB": "microUSB v2.0",
+        "Radio": "Stereo FM radio",
+        "GPS": "Có, Hỗ trợ A-GPS"
+    },
+    "Pin": {
+        "Dung lượng pin": "Li-Ion 2000 mAh(BN-02)",
+        "Thời gian chờ": "Lên tới 720 giờ",
+        "Thời gian thoại": "Lên tới 16 giờ(2G)/Lên tới 13giờ (3G)",
+        "Thời gian nghe nhạc": "Lên tới 37 giờ"
+    },
+    "Tính năng khác": {
+        "Định dạng âm thanh": "MP3/ WAV/ eAAC+/ Flac",
+        "Định dạng video": "MP4/ H.263/ H.264",
+        "Xử lý hình ảnh": "Biên tập hình ảnh",
+        "Xử lý văn bản": "Đọc văn bản; Đoán chữ thông minh",
+        "Ra lệnh bằng giọng nói": "Ghi âm/quay số bằng giọng nói",
+        "Tích hợp mạng xã hội": "SNS integration",
+        "Micro chống ồn": "Lọc tiếng ồn với micro chuyên dụng"
+    }
 }

@@ -26,10 +26,10 @@ ul li:last-child{
 }
 nav a::after{
     /* content: "|"; */
-    font-weight: 300;
+    /* font-weight: 300;
     margin: 0 5px 0 10px;
     position: relative;
-    top: -2px;
+    top: -2px; */
 }
 nav li:last-child a::after{
     content: "";
@@ -157,15 +157,7 @@ p{
     left: -41px;
     bottom: 1px;
 }
-/* #owl-demo .item{
-    margin: 3px;
-  }
-#owl-demo .item img{
-    display: block;
-    width: 100%;
-    height: auto;
-  } */
-  .ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover{
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover{
       background-color: #a8cf45;
       color:white;
       border: none;
@@ -204,7 +196,6 @@ a:hover{
     color:#db4940 !important;
 }
 div[class~="bg-color-2"] a:hover{
-
     color:#db4940 !important;
 }
 div[class~="bg-color-1"] a:hover{
@@ -215,7 +206,9 @@ div[class~="bg-color-1"] a:hover{
     color: #547404;
     
 }
-
+.text-bold{
+    font-weight: bolder;
+}
 /* demo awl */
 
 
@@ -226,3 +219,16 @@ div[class~="bg-color-1"] a:hover{
         content: "";
     }
   }
+  @media screen and (max-width:768px)
+  {
+        #width-cus{
+            width: 100%;
+        }
+        .text-center-cus{
+            text-align: center;
+        }
+        div[class~="bg-color-2"] li:hover{
+            background-color:#b3ff00 !important;
+            color: #a8cf45;
+        }
+}
