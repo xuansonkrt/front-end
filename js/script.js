@@ -129,4 +129,18 @@ jQuery(document).ready(function ($) {
         }
 
     });
+    // $("#btnCollapse").click(function(){
+    //     $("#mySidenav").css("width","250px");
+    // });
+    $("#btnClose").click(function(){
+        $("#mySidenav").css("width","0px");
+    });
+   
 });
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+
+// function closeNav() {
+//     document.getElementById("mySidenav").style.width = "0";
+// }

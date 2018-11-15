@@ -44,11 +44,11 @@
                     <div class="container-fluid px-0">
                         <div id="menu-1-left" class="float-left">
                             <nav class="navbar navbar-expand-lg  py-0 px-0 nav1">
-                                <button id="collapse-cus" class="navbar-toggler" type="button" data-toggle="collapse"
-                                    data-target="#menuleft">
+                                <button id="collapse-cus btnCollapse" onclick="openNav()" class="navbar-toggler" type="button"
+                                    data-toggle="collapse" data-target="#menuleft" >
                                     <span class="fa fa-list"></span>
                                 </button>
-                                <div class="collapse navbar-collapse  p-0 py-1 " id="menuleft">
+                                <div class="collapse navbar-collapse  p-0 py-1 " id="menuleft-dis">
                                     <ul class="navbar-nav">
                                         <li class="nav-item ">
                                             <a href="#" class="nav-link py-0 px-0 vertical-bar">VỀ KIMI</a>
@@ -64,6 +64,14 @@
                                         </li>
                                     </ul>
                                 </div>
+                                <div id="mySidenav" class="sidenav">
+                                    <a href="#" class="closebtn" onclick="closeNav()" id="btnClose">&times;</a>
+                                    <a href="#">VỀ KIMI</a>
+                                    <a href="#">KINH DOAN</a>
+                                    <a href="#">HỆ THỐNG PHÂN PHỐI</a>
+                                    <a href="#">KIẾN THỨC</a>
+                                </div>
+
                             </nav>
                         </div>
                         <div id="menu-1-right" class="float-right">
@@ -97,19 +105,16 @@
                 </div>
             </div>
         </div>
-
-
-
         <div class="container-fluid bg-color-2 text-white ">
             <div class="container px-0">
                 <nav class="navbar navbar-expand-lg  py-0 px-0 nav1">
-                    <div id="width-cus">
-                        <button class="navbar-toggler pull-right " type="button" data-toggle="collapse" data-target="#collapsibleNavbar-2">
-                            <span class="fa fa-bars"></span>
-                        </button>
+                    <div id="width-cus" class="">
+                            <button  class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar-2">
+                                    <span class="fa fa-bars"></span>
+                                </button>
                     </div>
                     <div class="collapse navbar-collapse  p-0 py-1 w-100" id="collapsibleNavbar-2">
-                        <div class="float-lg-left text-center-cus">
+                        <div class="float-lg-left text-center">
                             <ul class="navbar-nav">
                                 <li class="nav-item">
                                     <a href="#" class="nav-link py-0 px-0 vertical-bar">TRANG CHỦ</a>
@@ -156,7 +161,7 @@
                     </div>
                 </div>
                 <div class="col-lg-4 py-lg-4 p-0">
-                    <div class="float-sm-right">
+                    <div class="float-right">
                         <ul>
                             <li class="pr-3">
                                 <a href="#" class="color-2"> <i class="fas fa-edit"></i>Kiểm tra đơn hàng</a>
@@ -165,22 +170,135 @@
                                 <a href="#" id="navbardrop" class="dropdown-toggle color-2" data-toggle="dropdown"> Tài
                                     khoản</a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="#" class="dropdown-item color-2"> <i class="far fa-user-circle"></i>
-                                            Đăng nhập</a></li>
-                                    <li><a href="#" class="dropdown-item  color-2"><i class="fas fa-plus"></i> Đăng kí</a></li>
+                                    <li><a href="#" class="dropdown-item color-2" data-toggle="modal" data-target="#modalDangNhap">
+                                            <i class="far fa-user-circle"></i>
+                                            Đăng nhập</a>
+                                    </li>
+
+                                    <li><a href="#" class="dropdown-item  color-2" data-toggle="modal" data-target="#modalDangKy"><i
+                                                class="fas fa-plus"></i> Đăng kí</a></li>
                                 </ul>
                             </li>
                             <li>
                                 <a href="#"> <i class="fas fa-shopping-bag color-2" style="font-size:40px">
-                                        <span style="font-size:20px" class="badge" id="countProd">3</span>
+                                        <span style="font-size:20px" class="badge" id="countProd">0</span>
                                     </i></a>
                             </li>
                         </ul>
-                    </div>
+                        <!-- Đăng nhập -->
+                        <div class="modal" id="modalDangNhap">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h4 class="modal-title">Đăng nhập</h4>
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form>
+                                            <div class="form-group">
+                                                <label for="email">Tên đăng nhập:</label>
+                                                <input type="email" class="form-control" id="email">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="pwd">Mật khẩu:</label>
+                                                <input type="password" class="form-control" id="pwd">
+                                            </div>
+                                            <div class="form-group form-check">
+                                                <label class="form-check-label">
+                                                    <input class="form-check-input" type="checkbox"> Ghi nhớ đăng nhập
+                                                </label>
+                                            </div>
+                                            <button type="submit" class="btn btn-primary">Đăng nhập</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Đăng ký -->
+                        <div class="modal" id="modalDangKy">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h4 class="modal-title">Đăng ký</h4>
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form>
+                                            <input type="text" name="" class="form-control mb-3" placeholder="Họ tên đầy đủ">
+                                            <div class="input-group mb-3">
+                                                <input type="text" class="form-control" placeholder="Tên đăng nhập">
+                                                <div class="input-group-append">
+                                                    <button class="btn btn-primary" type="submit">Kiểm tra</button>
+                                                </div>
+                                            </div>
+                                            <input type="text" name="" class="form-control mb-3" placeholder="Mật khẩu">
 
+                                            <input type="text" name="" class="form-control mb-3" placeholder="Xác nhận mật khẩu">
+                                            <div class="row mb-2">
+                                                <div class="col-4">
+                                                    <select id="Ngay" class="form-control">
+
+                                                    </select>
+                                                </div>
+                                                <div class="col-4">
+                                                    <select id="Thang" class="form-control">
+
+                                                    </select>
+                                                </div>
+                                                <div class="col-4">
+                                                    <select id="Nam" class="form-control">
+
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <!-- <br> -->
+                                            <label> Giới tính: </label>
+                                            <input type="radio" name="gender" value="male"> <strong> Nam </strong>
+                                            <input type="radio" name="gender" value="female"> <strong> Nữ </strong>
+                                            <div class="row">
+                                                <div class="col-9">
+                                                    <p>Bằng việc click vào các nút Đăng ký bạn đã đồng ý <a href="#">Điều
+                                                            khoản sử dụng</a></p>
+                                                </div>
+                                                <div class="col-3">
+                                                    <button class="btn btn-primary">Đăng ký</button>
+                                                </div>
+                                            </div>
+                                            <script>
+                                                for (var i = 1; i <= 31; i++) {
+                                                    var day = $("<option></option>");
+                                                    day.append(i);
+                                                    $("#Ngay").append(day);
+                                                }
+                                                for (var i = 1; i <= 12; i++) {
+                                                    var month;
+                                                    if (i == 5)
+                                                        month = $("<option selected></option>");
+                                                    else
+                                                        month = $("<option></option>");
+                                                    month.append("Tháng " + i);
+                                                    $("#Thang").append(month);
+                                                }
+                                                for (var i = 1900; i <= 2018; i++) {
+                                                    var year;
+                                                    if (i === 1998)
+                                                        year = $("<option selected></option>");
+                                                    else
+                                                        year = $("<option></option>");
+
+                                                    year.append(i);
+                                                    $("#Nam").append(year);
+                                                }
+
+                                            </script>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
     </header>
     <main>
         <div class="container container-md-fluid">
@@ -224,12 +342,37 @@
                             </div>
                             <!-- <p style="border-bottom: 1px solid black" class=""></p> -->
                             <div class="py-3">
-                                <button class="btn btn-primary btn-sm"><i class="far fa-thumbs-up"></i> Like<span class="badge"
+                                <!-- <button class="btn btn-primary btn-sm"><i class="far fa-thumbs-up"></i> Like<span class="badge"
                                         id="countLike">4</span></button>
                                 <button class="btn btn-primary btn-sm">Share</button>
                                 <button class="btn btn-outline-secondary btn-sm"><i class="fab fa-google-plus-g color-1"></i></button>
                                 <button class="btn btn-warning btn-sm color-white"><i class="fa fa-plus-square"></i>
-                                    Share</button>
+                                    Share</button> -->
+
+                                <div class="dropdown">
+                                    <button class="btn btn-primary btn-sm"><i class="far fa-thumbs-up"></i> Like<span
+                                            class="badge" id="countLike">4</span></button>
+                                    <button class="btn btn-primary btn-sm">Share</button>
+                                    <button class="btn btn-outline-secondary btn-sm"><i class="fab fa-google-plus-g color-1"></i></button>
+                                    <button class="btn btn-warning btn-sm" type="button" id="dropdownMenuButton"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-plus-square"></i>
+                                        Share
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item" href="#" id="facebook"><i class="fa fa-facebook-official"></i>
+                                            Facebook</a>
+                                        <a class="dropdown-item" href="#"><i class="fa fa-twitter-square" id="twitter"></i>
+                                            Twitter</a>
+                                        <a class="dropdown-item" href="#"><i class="fa fa-print"></i> Printf</a>
+                                        <a class="dropdown-item" href="#"><i class="far fa-envelope"></i> Email</a>
+                                        <a class="dropdown-item" href="#"><i class="fa fa-pinterest-square"></i>
+                                            Printerest</a>
+                                        <a class="dropdown-item" href="#" id="google"><i class="fa fa-google-plus-square"></i>
+                                            Gmail</a>
+                                        <a class="dropdown-item" href="#" id="youtube"><i class="fas fa-plus-square"></i>
+                                            More...</a>
+                                    </div>
+                                </div>
                             </div>
                             <div class="mb-3">
                                 <p><strong>Số lượng:</strong></p>
@@ -293,535 +436,24 @@
                                     trên chiếc Nokia XL này.</p>
                             </div>
                             <div id="ThongSo">
-                                <!-- <div id="TongQuan" class="row mb-1 bg-secondary">
-                                    <div class="col-2  bg-secondary my-auto">
-                                            <p class="text-white"><strong>Tổng quan</strong></p>
-                                    </div>
-                                    <div class="col-10 bg-white">
-                                        <div class="row bg-light mb-1" id="Mang2G">
-                                            <div class="col-3">
-                                                <p>Mạng 2G</p>
-                                            </div>
-                                            <div class="col-9">
-                                                <p>GSM 850 / 900 / 1800 / 1900 - SIM 1 & SIM 2</p>
-                                            </div>
-                                        </div>
-                                        <div class="row bg-light mb-1" id="Mang3G">
-                                            <div class="col-3">
-                                                <p>Mạng 3G</p>
-                                            </div>
-                                            <div class="col-9">
-                                                <p>HSDPA 900/2100</p>
-                                            </div>
-                                        </div>
-                                        <div class="row bg-light mb-1" id="SIM">
-                                            <div class="col-3">
-                                                <p>SIM</p>
-                                            </div>
-                                            <div class="col-9">
-                                                <p>Micro SIM, 2 SIM</p>
-                                            </div>
-                                        </div>
-                                        <div class="row bg-light mb-1" id="CongBo">
-                                            <div class="col-3">
-                                                <p>Công bố</p>
-                                            </div>
-                                            <div class="col-9">
-                                                <p>Tháng 2/2014</p>
-                                            </div>
-                                        </div>
-                                        <div class="row bg-light mb-1" id="PhatHanh">
-                                            <div class="col-3">
-                                                <p>Phát hành</p>
-                                            </div>
-                                            <div class="col-9">
-                                                <p>Tháng 5/2014</p>
-                                            </div>
-                                        </div>
-                                        <div class="row bg-light" id="NgonNgu">
-                                            <div class="col-3">
-                                                <p>Ngôn ngữ</p>
-                                            </div>
-                                            <div class="col-9">
-                                                <p>Đa ngôn ngữ (có tiếng Việt)</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div id="Camera" class="row mb-1 bg-secondary">
-                                    <div class="col-2 bg-secondary my-auto">
-                                        <p class="text-white"><strong>Camera</strong></p>
-                                    </div>
-                                    <div class="col-10 bg-white">
-                                        <div class="row bg-light mb-1" id="DoPhanGiai">
-                                            <div class="col-3">
-                                                <p>Độ phân giải</p>
-                                            </div>
-                                            <div class="col-9">
-                                                <p>5 MP; 2592 х 1944 pixels</p>
-                                            </div>
-                                        </div>
-                                        <div class="row bg-light mb-1" id="LedFlash">
-                                            <div class="col-3">
-                                                <p>Led flash</p>
-                                            </div>
-                                            <div class="col-9">
-                                                <p>Led flash</p>
-                                            </div>
-                                        </div>
-                                        <div class="row bg-light mb-1" id="TinhNang">
-                                            <div class="col-3">
-                                                <p>Tính Năng</p>
-                                            </div>
-                                            <div class="col-9">
-                                                <p>Kích thước cảm biến 1/4"; Tự động lấy nét; Nhận diện khuôn
-                                                    mặt; Bức
-                                                    tranh toàn cảnh</p>
-                                            </div>
-                                        </div>
-                                        <div class="row bg-light mb-1" id="QuayVideo">
-                                            <div class="col-3">
-                                                <p>Quay video</p>
-                                            </div>
-                                            <div class="col-9">
-                                                <p>480p@30fps</p>
-                                            </div>
-                                        </div>
 
-                                        <div class="row bg-light" id="CameraPhu">
-                                            <div class="col-3">
-                                                <p>Camera phụ</p>
-                                            </div>
-                                            <div class="col-9">
-                                                <p>2 MP</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div id="ManHinh" class="row mb-1 bg-secondary">
-                                    <div class="col-2 bg-secondary my-auto">
-                                        <div class="my-auto ">
-                                            <p class="text-light"><strong>Màn hình</strong></p>
-                                        </div>
-                                    </div>
-                                    <div class="col-10 bg-white">
-                                        <div class="row bg-light mb-1" id="CongNghe">
-                                            <div class="col-3">
-                                                <p>Công nghệ</p>
-                                            </div>
-                                            <div class="col-9">
-                                                <p>IPS LCD, 16 triệu màu</p>
-                                            </div>
-                                        </div>
-                                        <div class="row bg-light mb-1" id="KichThuoc">
-                                            <div class="col-3">
-                                                <p>Kích thước</p>
-                                            </div>
-                                            <div class="col-9">
-                                                <p>5.0 inches</p>
-                                            </div>
-                                        </div>
-                                        <div class="row bg-light mb-1" id="DoPhanGiai">
-                                            <div class="col-3">
-                                                <p>Độ phân giải</p>
-                                            </div>
-                                            <div class="col-9">
-                                                <p>480 x 800 pixels</p>
-                                            </div>
-                                        </div>
-                                        <div class="row bg-light mb-1" id="MatDoDiemAnh">
-                                            <div class="col-3">
-                                                <p>Mật độ điểm ảnh</p>
-                                            </div>
-                                            <div class="col-9">
-                                                <p>187 ppi</p>
-                                            </div>
-                                        </div>
-
-                                        <div class="row bg-light" id="CamUngDaDiem">
-                                            <div class="col-3">
-                                                <p>Cảm ứng đa điểm</p>
-                                            </div>
-                                            <div class="col-9">
-                                                <p>Cảm ứng điện dung</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div id="ThietKe" class="row mb-1 bg-secondary">
-                                    <div class="col-2 bg-secondary my-auto">
-                                        <p class="text-white"><strong>Thiết kế</strong></p>
-                                    </div>
-                                    <div class="col-10 bg-white">
-                                        <div class="row bg-light mb-1" id="KichThuoc">
-                                            <div class="col-3">
-                                                <p>Kích thước (mm)</p>
-                                            </div>
-                                            <div class="col-9">
-                                                <p>141.4 x 77.7 x 10.9 mm</p>
-                                            </div>
-                                        </div>
-                                        <div class="row bg-light mb-1" id="KhoiLuong">
-                                            <div class="col-3">
-                                                <p>Khối lượng (gram)</p>
-                                            </div>
-                                            <div class="col-9">
-                                                <p>190 g</p>
-                                            </div>
-                                        </div>
-                                        <div class="row bg-light mb-1" id="ChatLieu">
-                                            <div class="col-3">
-                                                <p>Chất liệu</p>
-                                            </div>
-                                            <div class="col-9">
-                                                <p>Nhựa cao cấp</p>
-                                            </div>
-                                        </div>
-
-                                        <div class="row bg-light" id="MauSac">
-                                            <div class="col-3">
-                                                <p>Màu sắc</p>
-                                            </div>
-                                            <div class="col-9">
-                                                <p>Xanh lá, Trắng, Đen, Cam, Vàng, Xanh da trời</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div id="AmThanh" class="row mb-1 bg-secondary">
-                                    <div class="col-2 my-auto">
-                                        <p class="text-white"><strong>Âm thanh</strong></p>
-                                    </div>
-                                    <div class="col-10 bg-white">
-                                        <div class="row bg-light mb-1" id="LoaNgoai">
-                                            <div class="col-3">
-                                                <p>Loa ngoài</p>
-                                            </div>
-                                            <div class="col-9">
-                                                <p>Có</p>
-                                            </div>
-                                        </div>
-
-                                        <div class="row bg-light" id="Jack3.5">
-                                            <div class="col-3">
-                                                <p>Jack 3.5mm</p>
-                                            </div>
-                                            <div class="col-9">
-                                                <p>Có</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div id="BoNhoTrong" class="row mb-1 bg-secondary">
-                                    <div class="col-2 my-auto">
-                                        <p class="text-white"><strong>Bộ nhớ trong</strong></p>
-                                    </div>
-                                    <div class="col-10 bg-white">
-                                        <div class="row bg-light mb-1" id="TheNho">
-                                            <div class="col-3">
-                                                <p>Khe cắm thẻ nhớ</p>
-                                            </div>
-                                            <div class="col-9">
-                                                <p>MicroSD lên tới 32GB</p>
-                                            </div>
-                                        </div>
-                                        <div class="row bg-light mb-1" id="ROM">
-                                            <div class="col-3">
-                                                <p>Bộ nhớ trong</p>
-                                            </div>
-                                            <div class="col-9">
-                                                <p>4GB</p>
-                                            </div>
-                                        </div>
-
-                                        <div class="row bg-light" id="Ram">
-                                            <div class="col-3">
-                                                <p>RAM</p>
-                                            </div>
-                                            <div class="col-9">
-                                                <p>768MB</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div id="XuLy" class="row mb-1 bg-secondary">
-                                    <div class="col-2 my-auto">
-                                        <p class="text-white"><strong>Xử lý</strong></p>
-                                    </div>
-                                    <div class="col-10 bg-white">
-                                        <div class="row bg-light mb-1" id="HeDieuHanh">
-                                            <div class="col-3">
-                                                <p>Hệ điều hành</p>
-                                            </div>
-                                            <div class="col-9">
-                                                <p>Android</p>
-                                            </div>
-                                        </div>
-                                        <div class="row bg-light mb-1" id="ChipSet">
-                                            <div class="col-3">
-                                                <p>Chipset</p>
-                                            </div>
-                                            <div class="col-9">
-                                                <p>Qualcomm MSM8225 Snapdragon S4 Play</p>
-                                            </div>
-                                        </div>
-                                        <div class="row bg-light mb-1" id="CPU">
-                                            <div class="col-3">
-                                                <p>CPU</p>
-                                            </div>
-                                            <div class="col-9">
-                                                <p>Dual-core 1 GHz Cortex-A5</p>
-                                            </div>
-                                        </div>
-                                        <div class="row bg-light mb-1" id="GPU">
-                                            <div class="col-3">
-                                                <p>GPU</p>
-                                            </div>
-                                            <div class="col-9">
-                                                <p>Adreno 203</p>
-                                            </div>
-                                        </div>
-                                        <div class="row bg-light mb-1" id="CamBien">
-                                            <div class="col-3">
-                                                <p>Cảm biến</p>
-                                            </div>
-                                            <div class="col-9">
-                                                <p>Gia tốc; Tiệm cận</p>
-                                            </div>
-                                        </div>
-                                        <div class="row bg-light mb-1" id="TinNhan">
-                                            <div class="col-3">
-                                                <p>Tin nhắn</p>
-                                            </div>
-                                            <div class="col-9">
-                                                <p>SMS (threaded view); MMS; Email; Push Email; IM</p>
-                                            </div>
-                                        </div>
-                                        <div class="row bg-light mb-1" id="web">
-                                            <div class="col-3">
-                                                <p>Trình duyệt web</p>
-                                            </div>
-                                            <div class="col-9">
-                                                <p>HTML</p>
-                                            </div>
-                                        </div>
-                                        <div class="row bg-light" id="Java">
-                                            <div class="col-3">
-                                                <p>Java</p>
-                                            </div>
-                                            <div class="col-9">
-                                                <p>via Java MIDP emulator</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div id="DuLieuvaKetNoi" class="row mb-1 bg-secondary">
-                                    <div class="col-2 my-auto">
-                                        <p class="text-white"><strong>Dữ liệu và kết nối</strong></p>
-                                    </div>
-                                    <div class="col-10 bg-white">
-                                        <div class="row bg-light mb-1" id="2G-GPRS">
-                                            <div class="col-3">
-                                                <p>2G - GPRS</p>
-                                            </div>
-                                            <div class="col-9">
-                                                <p>85.6 kbps</p>
-                                            </div>
-                                        </div>
-                                        <div class="row bg-light mb-1" id="2G-EDGE">
-                                            <div class="col-3">
-                                                <p>2G - EDGE</p>
-                                            </div>
-                                            <div class="col-9">
-                                                <p>Có, 236.8 kbps</p>
-                                            </div>
-                                        </div>
-                                        <div class="row bg-light mb-1" id="3G">
-                                            <div class="col-3">
-                                                <p>3G-Download/Upload</p>
-                                            </div>
-                                            <div class="col-9">
-                                                <p>7.2Mbps/ 5.76Mbps</p>
-                                            </div>
-                                        </div>
-                                        <div class="row bg-light mb-1" id="WLAN">
-                                            <div class="col-3">
-                                                <p>WLAN</p>
-                                            </div>
-                                            <div class="col-9">
-                                                <p>Wi-Fi 802.11 b/g/n; Wi-Fi hotspot</p>
-                                            </div>
-                                        </div>
-                                        <div class="row bg-light mb-1" id="Bluetooth">
-                                            <div class="col-3">
-                                                <p>Bluetooth</p>
-                                            </div>
-                                            <div class="col-9">
-                                                <p>v3.0, Bluetooth with A2DP</p>
-                                            </div>
-                                        </div>
-                                        <div class="row bg-light mb-1" id="NFC">
-                                            <div class="col-3">
-                                                <p>NFC</p>
-                                            </div>
-                                            <div class="col-9">
-                                                <p>Không</p>
-                                            </div>
-                                        </div>
-                                        <div class="row bg-light mb-1" id="HongNgoai">
-                                            <div class="col-3">
-                                                <p>Cổng hồng ngoại</p>
-                                            </div>
-                                            <div class="col-9">
-                                                <p>Không</p>
-                                            </div>
-                                        </div>
-                                        <div class="row bg-light mb-1" id="usb">
-                                            <div class="col-3">
-                                                <p>USB</p>
-                                            </div>
-                                            <div class="col-9">
-                                                <p>microUSB v2.0</p>
-                                            </div>
-                                        </div>
-                                        <div class="row bg-light mb-1" id="Radio">
-                                            <div class="col-3">
-                                                <p>Radio</p>
-                                            </div>
-                                            <div class="col-9">
-                                                <p>Stereo FM radio</p>
-                                            </div>
-                                        </div>
-
-                                        <div class="row bg-light" id="GPS">
-                                            <div class="col-3">
-                                                <p>GPS</p>
-                                            </div>
-                                            <div class="col-9">
-                                                <p>Có, Hỗ trợ A-GPS</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div id="Pin" class="row mb-1 bg-secondary">
-                                    <div class="col-2 my-auto">
-                                        <p class="text-white"><strong>Pin</strong></p>
-                                    </div>
-                                    <div class="col-10 bg-white">
-                                        <div class="row bg-light mb-1" id="DungLuongPin">
-                                            <div class="col-3">
-                                                <p>Dung lượng pin</p>
-                                            </div>
-                                            <div class="col-9">
-                                                <p>Li-Ion 2000 mAh(BN-02)</p>
-                                            </div>
-                                        </div>
-                                        <div class="row bg-light mb-1" id="ThoiGianCho">
-                                            <div class="col-3">
-                                                <p>Thời gian chờ</p>
-                                            </div>
-                                            <div class="col-9">
-                                                <p>Lên tới 720 giờ</p>
-                                            </div>
-                                        </div>
-                                        <div class="row bg-light mb-1" id="ThoiGianThoai">
-                                            <div class="col-3">
-                                                <p>Thời gian thoại</p>
-                                            </div>
-                                            <div class="col-9">
-                                                <p>Lên tới 16 giờ(2G)/Lên tới 13giờ (3G)</p>
-                                            </div>
-                                        </div>
-
-                                        <div class="row bg-light" id="ThoiGianNgheNhac">
-                                            <div class="col-3">
-                                                <p>Thời gian nghe nhạc</p>
-                                            </div>
-                                            <div class="col-9">
-                                                <p>Lên tới 37 giờ</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div id="TinhNangKhac" class="row mb-1 bg-secondary">
-                                    <div class="col-2 my-auto">
-                                        <p class="text-white"><strong>Tính năng khác</strong></p>
-                                    </div>
-                                    <div class="col-10  bg-white">
-                                        <div class="row bg-light mb-1" id="DinhDangAmThanh">
-                                            <div class="col-3">
-                                                <p>Định dạng âm thanh</p>
-                                            </div>
-                                            <div class="col-9">
-                                                <p>MP3/ WAV/ eAAC+/ Flac</p>
-                                            </div>
-                                        </div>
-                                        <div class="row bg-light mb-1" id="DinhDangVideo">
-                                            <div class="col-3">
-                                                <p>Định dạng video</p>
-                                            </div>
-                                            <div class="col-9">
-                                                <p>MP4/ H.263/ H.264</p>
-                                            </div>
-                                        </div>
-                                        <div class="row bg-light mb-1" id="XuLyHinhAnh">
-                                            <div class="col-3">
-                                                <p>Xử lý hình ảnh</p>
-                                            </div>
-                                            <div class="col-9">
-                                                <p>Biên tập hình ảnh</p>
-                                            </div>
-                                        </div>
-                                        <div class="row bg-light mb-1" id="XuLyVanBan">
-                                            <div class="col-3">
-                                                <p>Xử lý văn bản</p>
-                                            </div>
-                                            <div class="col-9">
-                                                <p>Đọc văn bản; Đoán chữ thông minh</p>
-                                            </div>
-                                        </div>
-                                        <div class="row bg-light mb-1" id="GiongNoi">
-                                            <div class="col-3">
-                                                <p>Ra lệnh bằng giọng nói</p>
-                                            </div>
-                                            <div class="col-9">
-                                                <p>Ghi âm/quay số bằng giọng nói</p>
-                                            </div>
-                                        </div>
-                                        <div class="row bg-light mb-1" id="MXH">
-                                            <div class="col-3">
-                                                <p>Tích hợp mạng xã hội</p>
-                                            </div>
-                                            <div class="col-9">
-                                                <p>SNS integration</p>
-                                            </div>
-                                        </div>
-                                        <div class="row bg-light" id="ChongOn">
-                                            <div class="col-3">
-                                                <p>Micro chống ồn</p>
-                                            </div>
-                                            <div class="col-9">
-                                                <p>Lọc tiếng ồn với micro chuyên dụng</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>  -->
                             </div>
                         </div>
                     </div>
                     <div id="path" class="pt-3">
                         <a href="#">Trang chủ</a>
                         <span class="fa fa-angle-double-right"></span>
-                        <a href="#" class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Điện thoại</a>
+                        <a href="#" class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">Điện thoại</a>
                         <span class="fa fa-angle-double-right"></span>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                             <a class="dropdown-item" href="#">Sony</a>
                             <a class="dropdown-item" href="#">Samsung</a>
                             <a class="dropdown-item" href="#">Nokia</a>
                             <a class="dropdown-item" href="#">Apple</a>
-                          </div>
+                        </div>
                         <a href="#">Nokia</a>
-                        <span class="fa fa-angle-double-right"></span>                        
+                        <span class="fa fa-angle-double-right"></span>
                         <a href="#"><strong>Nokia XL(CTY)</strong></a>
                     </div>
                 </div>
@@ -903,12 +535,12 @@
             <div id="" class="container-fluid bg-color-2 ">
                 <div class="container py-3">
                     <div class="row">
-                        <div class="col-lg-2 col-md-12 col-sm-12 my-auto pb-md-3">
+                        <div class="col-lg-2 col-md-12 col-sm-12 my-auto ">
                             <div class="row">
-                                <div class="col-lg-12 col-sm-5">
+                                <div class="col-lg-12 col-sm-5 col-5 ">
                                     <a href="#"><img src="images/logo-2.png" width="100%" alt="Logo" style="filter: brightness(0) invert(1);"></a>
                                 </div>
-                                <div class="col-sm-5"></div>
+                                <div class="col-sm-5 col-5 p-0 m-0" style="height: 0px;"></div>
                                 <div class="col-2 float-sm-right">
                                     <nav class="navbar navbar-expand-lg">
                                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar-3">
@@ -918,11 +550,11 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-6 col-md-12 " style="font-size: 80%">
+                        <div class="col-lg-6 col-md-12 my-auto" style="font-size: 80%">
                             <nav class="navbar navbar-expand-lg  py-0 nav1 my-auto">
 
-                                <div class="collapse navbar-collapse  p-0 py-1" id="collapsibleNavbar-3">
-                                    <div class="float-lg-left text-sm-center">
+                                <div class="collapse navbar-collapse  p-0 py-1 " id="collapsibleNavbar-3">
+                                    <div class="float-lg-left text-center mx-auto">
                                         <ul class="navbar-nav">
                                             <li class="nav-item">
                                                 <a href="#" class="nav-link py-0 px-0 vertical-bar">TRANG CHỦ</a>
@@ -945,7 +577,7 @@
                             </nav>
 
                         </div>
-                        <div class="col-lg-4 col-md-12">
+                        <div class="col-lg-4 col-md-12 my-auto">
                             <div class="input-group mb-3 my-auto float-lg-right">
                                 <!-- <div class=""> -->
                                 <input id="emailSignup" type="text" class="form-control" placeholder="Nhập Email đăng ký khuyến mại">

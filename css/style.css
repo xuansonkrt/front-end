@@ -17,7 +17,7 @@ ul li:last-child{
     background-color: #a8cf45;
     color: white;
     transform: rotate(-45deg);
-
+    z-index: 9999;
 }
 #top:hover{
     /* -ms-transform: scale(0.02, 0.03); IE 9 */
@@ -211,7 +211,29 @@ div[class~="bg-color-1"] a:hover{
 }
 /* demo awl */
 
-
+/* dropdown */
+.dropdown:hover>.dropdown-menu {
+    display: block;
+    position: absolute;
+    left:100px;
+    float:left;
+    z-index: 100;
+  }
+  
+  .dropdown>.dropdown-toggle:active {
+    /*Without this, clicking will make it sticky*/
+      pointer-events: none;
+  }
+  .icon{
+    transition: transform 1s;
+  }
+  .icon:hover{
+    transform: rotate(360deg);
+  }
+#temp{
+    display: none;
+}
+/* modal */
 
   @media screen and (max-width:990px)
   {
@@ -219,10 +241,11 @@ div[class~="bg-color-1"] a:hover{
         content: "";
     }
   }
-  @media screen and (max-width:768px)
+  @media screen and (max-width:1200px)
   {
+        display: block;
         #width-cus{
-            width: 100%;
+            /* width: 100%; */
         }
         .text-center-cus{
             text-align: center;
@@ -231,4 +254,47 @@ div[class~="bg-color-1"] a:hover{
             background-color:#b3ff00 !important;
             color: #a8cf45;
         }
+}
+/* side nav */
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover{
+    color: #f1f1f1;
+    background-color: rgb(54, 53, 53);
+}
+.closebtn:hover{
+    background-color: #111 !important;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
 }
